@@ -1,0 +1,10 @@
+{"n": 29, "tipo": "teoria",
+ "resumen": "Parte 1 de la clase del 26-09-2024 (misma clase que la n.º 28): muestreo natural y flat-top, efecto de apertura, origen de los 44,1 kHz y comienzo de la cuantificación uniforme.",
+ "temas": ["Muestreo natural y flat-top", "Teorema de muestreo (Nyquist)", "Cuantificación", "PCM"],
+ "detalle": [
+  "Los impulsos ideales no existen: muestreo natural (alias atenuados según una sinc) y flat-top con sample & hold",
+  "Efecto de apertura del flat-top, compensable por ecualización",
+  "La frecuencia de 44,1 kHz del CD proviene de grabar audio digital en cintas de video",
+  "Cuantificación: discretizar amplitudes; uniforme vs. no uniforme (compresor + cuantificador uniforme)",
+  "Niveles de decisión y error de cuantificación máximo ΔQ/2"
+ ]}

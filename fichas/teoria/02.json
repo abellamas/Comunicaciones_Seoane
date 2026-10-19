@@ -1,0 +1,10 @@
+{"n": 2, "tipo": "mixta",
+ "resumen": "Parte 1 de la clase del 12-08-2024 (misma clase que la n.º 1): deducción de la atenuación de espacio libre y uso de unidades logarítmicas en un enlace y en una cadena de cuadripolos.",
+ "temas": ["Atenuación y decibeles", "Atenuación de espacio libre", "Antenas (directividad y área efectiva)", "Propagación y línea de vista", "Relación señal a ruido (SNR)"],
+ "detalle": [
+  "Flujo de potencia de onda esférica Pt/(4πd²) y potencia recibida = flujo × área efectiva",
+  "Área efectiva de antena: λ²/(4π) · D; la directividad concentra la energía radiada",
+  "Atenuación de espacio libre (4πd/λ)²; en dB: 32,44 + 20 log d[km] + 20 log f[MHz]",
+  "La curvatura terrestre (horizonte) limita el alcance: se eleva la antena con mástiles",
+  "Los dB son relaciones de potencia: no hay 'dB de tensión'; con impedancias distintas hay que pasar por potencia"
+ ]}

@@ -1,0 +1,10 @@
+{"n": 32, "tipo": "teoria",
+ "resumen": "Representación eléctrica de los dígitos binarios de PCM, tasa de información de una señal digitalizada, conversión paralelo–serie y ancho de banda necesario para transmitir PCM.",
+ "temas": ["PCM", "Tasa de información", "Ancho de banda", "Codificación de línea"],
+ "detalle": [
+  "Lógica positiva o negativa; pulsos unipolares o bipolares para representar 0 y 1",
+  "Más bits = más SNR: 16 bits ≈ 96 dB; audio profesional 20–24 bits (cada bit duplica los niveles)",
+  "Tasa PCM: R = fs · n (ej. 48 kHz × 16 = 768 kbit/s)",
+  "Paso de n líneas paralelas a una serie con una llave conmutadora: duración de cada bit = Ts/n",
+  "Ancho de banda de PCM entre R/2 (filtro ideal, 2 bits por ciclo) y R; en el curso se toma R/2"
+ ]}

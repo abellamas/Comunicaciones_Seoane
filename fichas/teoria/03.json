@@ -1,0 +1,11 @@
+{"n": 3, "tipo": "mixta",
+ "resumen": "Parte 2 de la clase del 12-08-2024 (misma clase que la n.º 1): niveles en dBm, radioenlaces con repetidores, ganancia de antenas pasivas vs. activos, radar, satélites y repaso del apunte introductorio (espectro, Maxwell, líneas de transmisión).",
+ "temas": ["Atenuación y decibeles", "Antenas (directividad y área efectiva)", "Propagación y línea de vista", "Espectro electromagnético", "Líneas de transmisión"],
+ "detalle": [
+  "dBm: 0 dBm = 1 mW (0,775 V sobre 600 Ω); trabajar todo en veces o todo en dB, sin mezclar",
+  "Radioenlaces de microondas con repetidores por el horizonte; respaldo de la fibra óptica",
+  "La directividad de una antena pasiva se suma como 'ganancia', pero sólo los elementos activos amplifican (energía de la alimentación)",
+  "Radar: distancia por tiempo de ida y vuelta; satélites geoestacionarios a ~36000 km",
+  "Espectro electromagnético y ecuaciones de Maxwell (resumen del apunte)",
+  "Líneas de transmisión: modelo RLCG; impedancia característica según geometría y dieléctrico"
+ ]}

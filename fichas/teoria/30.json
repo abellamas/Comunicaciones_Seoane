@@ -1,0 +1,9 @@
+{"n": 30, "tipo": "teoria",
+ "resumen": "Parte 2 de la clase del 26-09-2024 (misma clase que la n.º 28): el error de cuantificación como variable aleatoria uniforme y la relación señal a ruido de cuantificación.",
+ "temas": ["Cuantificación", "Ruido de cuantificación", "Relación señal a ruido (SNR)"],
+ "detalle": [
+  "El error de cuantificación es aleatorio (no hay sincronismo entre señal y muestreo; también influye el ruido)",
+  "Distribución uniforme en ±ΔQ/2 con densidad 1/ΔQ y media nula",
+  "Potencia del ruido de cuantificación = varianza = ΔQ²/12",
+  "S/Nq = 3M² → ≈ 6 dB por bit; con 16 bits ≈ 96 dB (CD)"
+ ]}

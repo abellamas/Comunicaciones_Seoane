@@ -1,0 +1,10 @@
+{"n": 13, "tipo": "mixta",
+ "resumen": "Parte 1 de la clase del 05-09-2024 (misma clase que la n.º 12): fórmula de Friis, temperatura equivalente de ruido y primer ejercicio de ubicación del preamplificador.",
+ "temas": ["Figura de ruido", "Temperatura de ruido", "Ruido térmico", "Antenas (directividad y área efectiva)"],
+ "detalle": [
+  "Cascada (Friis): F = F1 + (F2−1)/G1 + …; el ruido es aditivo y se acota a las primeras etapas",
+  "Temperatura equivalente de ruido: ruido propio del amplificador modelado como kTeB en la entrada; F = 1 + Te/T0",
+  "La figura de ruido de un pasivo es igual a su atenuación",
+  "Antena Yagi: dipolo plegado, directores y reflector (cultura general)",
+  "Poner el preamplificador después del cable empeora la figura de ruido total"
+ ]}

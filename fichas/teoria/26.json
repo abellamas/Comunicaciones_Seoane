@@ -1,0 +1,9 @@
+{"n": 26, "tipo": "teoria",
+ "resumen": "Discusión conceptual sobre la frecuencia de muestreo: con la señal limitada en banda, sobremuestrear no mejora la reconstrucción, porque entre dos muestras la señal no puede variar más rápido de lo que permite el filtro.",
+ "temas": ["Teorema de muestreo (Nyquist)", "Filtros"],
+ "detalle": [
+  "El muestreo es reversible sin pérdida de información (con leve distorsión compensable o latencia)",
+  "Mito: “más muestras = mejor”; si fs ≥ 2fmáx la reconstrucción ya es exacta",
+  "Entre dos muestras no puede haber variaciones de frecuencia mayor que la del filtro antialias",
+  "Analogía con la temperatura de una sala: muestrear más rápido que la dinámica de la señal es redundante"
+ ]}

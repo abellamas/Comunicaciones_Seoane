@@ -1,0 +1,8 @@
+{"n": 15, "tipo": "practica",
+ "resumen": "Parte 3 de la clase del 05-09-2024 (misma clase que la n.º 12): cálculo de la SNR necesaria en antena y de la potencia de ruido a partir de la temperatura de antena.",
+ "temas": ["Temperatura de ruido", "Relación señal a ruido (SNR)", "Figura de ruido"],
+ "detalle": [
+  "La temperatura equivalente de antena incluye el ruido del entorno (gases, vegetación, etc.)",
+  "Potencia de ruido en antena N = k·Ta·B, con el ancho de banda fijado por el receptor",
+  "Sistema adaptado en impedancia: la potencia de ruido es kTB"
+ ]}

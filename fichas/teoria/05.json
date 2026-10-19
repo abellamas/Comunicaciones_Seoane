@@ -1,0 +1,11 @@
+{"n": 5, "tipo": "teoria",
+ "resumen": "Introducción al ruido: tipos y fuentes, interferencias y compatibilidad electromagnética, y caracterización del ruido térmico desde Boltzmann y Planck hasta la potencia disponible kTB.",
+ "temas": ["Ruido (tipos y fuentes)", "Compatibilidad electromagnética", "Ruido térmico", "Ruido blanco", "Relación señal a ruido (SNR)"],
+ "detalle": [
+  "Ruido: señal aleatoria indeseada superpuesta a la útil; se distingue de zumbido, interferencias y distorsión (evitables)",
+  "Fuentes: artificiales (impulsivas), naturales (atmosféricas, solares, galácticas) y de circuito (shot, 1/f, partición, térmico)",
+  "Compatibilidad vs. susceptibilidad electromagnética; regulación del espectro por la UIT (bandas de AM y FM)",
+  "Ruido térmico (Johnson-Nyquist): densidad espectral de Planck hf/(e^(hf/kT)−1) ≈ kT para hf/kT ≤ 0,1",
+  "A 290 K es plana hasta ~600 GHz: se trata como ruido blanco; kT ≈ 4·10⁻²¹ W/Hz = −174 dBm/Hz",
+  "Tensión cuadrática media 4kTRB; potencia disponible (con adaptación) N = kTB, independiente de R"
+ ]}

@@ -1,0 +1,7 @@
+{"n": 14, "tipo": "practica",
+ "resumen": "Parte 2 de la clase del 05-09-2024 (misma clase que la n.º 12): continuación de los ejercicios de cascadas de ruido (con y sin preamplificador).",
+ "temas": ["Figura de ruido", "Relación señal a ruido (SNR)"],
+ "detalle": [
+  "Sin preamplificador la figura de ruido crece mucho y exige más potencia de transmisión",
+  "El receptor necesita una SNR mínima a su entrada; la figura de ruido de la cadena indica cuánta SNR hace falta en antena"
+ ]}

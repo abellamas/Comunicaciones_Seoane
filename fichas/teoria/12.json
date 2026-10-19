@@ -1,0 +1,11 @@
+{"n": 12, "tipo": "mixta",
+ "resumen": "Cierre de la teoría de ruido (fórmula de Friis y temperatura equivalente de ruido) seguido de ejercicios de cascadas antena–preamplificador–cable–receptor.",
+ "temas": ["Figura de ruido", "Temperatura de ruido", "Ruido térmico", "Relación señal a ruido (SNR)", "Antenas (directividad y área efectiva)"],
+ "detalle": [
+  "Fórmula de Friis para cascadas: F = F1 + (F2−1)/G1 + (F3−1)/(G1G2); se opera en veces, con ganancias de potencia",
+  "Temperatura equivalente de ruido: el ruido propio del amplificador se modela como kTeB a la entrada (temperatura ficticia)",
+  "F = 1 + Te/T0 (referencia 290 K); en cascada Te,total = Te1 + Te2/G1 + …",
+  "Un pasivo tiene figura de ruido igual a su atenuación (cable de 3 dB → F = 2); un splitter suma pérdidas de inserción",
+  "El preamplificador debe ir al pie de la antena: un atenuador antes del amplificador degrada la SNR",
+  "La temperatura de antena resume el ruido del entorno; N = k·Ta·B con B fijado por el receptor"
+ ]}

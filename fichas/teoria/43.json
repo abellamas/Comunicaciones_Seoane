@@ -1,0 +1,9 @@
+{"n": 43, "tipo": "repaso",
+ "resumen": "Clase de consultas previa al primer parcial: dudas sobre ruido en cascada, espectros por convolución, velocidad de señalización, cuantificación y muestreo flat-top, más un ejercicio integrador de información y capacidad.",
+ "temas": [],
+ "detalle": [
+  "En un receptor el ancho de banda se reduce por etapas: un único filtro con Q tan alto no es realizable",
+  "La velocidad de señalización se calcula con el pulso más corto, incluidos los de arranque y parada",
+  "Para no perder información la capacidad del canal debe superar la tasa de señalización física, no sólo la tasa de información",
+  "Pulsos M-arios llevan log2 M bits; los binarios son los más robustos frente a errores"
+ ]}

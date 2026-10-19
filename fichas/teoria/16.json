@@ -1,0 +1,10 @@
+{"n": 16, "tipo": "mixta",
+ "resumen": "Deducción de la figura de ruido de cuadripolos en cascada (Friis) y de la temperatura equivalente de ruido, con nociones de antenas y un ejercicio sobre la ubicación del preamplificador.",
+ "temas": ["Figura de ruido", "Temperatura de ruido", "Antenas (directividad y área efectiva)", "Relación señal a ruido (SNR)"],
+ "detalle": [
+  "Friis: F = F1 + (F2−1)/G1 + (F3−1)/(G1G2)…, en veces; vale si los anchos de banda no aumentan a lo largo de la cadena",
+  "Temperatura equivalente: el ruido propio Na se refleja a la entrada como k·Te·B; F = 1 + Te/T0 con T0 = 290 K",
+  "Friis también se expresa con temperaturas equivalentes; el piso de ruido de un instrumento se toma a 290 K",
+  "Dipolo de λ/2, monopolo λ/4 con plano de tierra, reflector parabólico y antena Yagi; la modulación permite antenas de tamaño razonable",
+  "Pasivos: F igual a la atenuación; el preamplificador debe ir junto a la antena (sensibilidad del receptor = SNR mínima)"
+ ]}

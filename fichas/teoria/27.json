@@ -1,0 +1,10 @@
+{"n": 27, "tipo": "practica",
+ "resumen": "Clase de ejercicios de la guía 3: muestreo con distintas fs, aliasing, muestreo flat-top, cuantificación uniforme y no uniforme y asignación de códigos binarios.",
+ "temas": ["Teorema de muestreo (Nyquist)", "Aliasing", "Cuantificación"],
+ "detalle": [
+  "El filtro ideal es no causal; sólo se aproxima en forma digital con buffer (introduce latencia)",
+  "El aliasing con tonos puros se comporta como una distorsión (aparecen frecuencias que no estaban)",
+  "Muestreo flat-top: efecto de apertura (inclinación del espectro) que se compensa ecualizando",
+  "Error máximo de cuantificación = ΔQ/2; la cantidad de dígitos binarios debe ser entera",
+  "Codificación signo-magnitud; multiplexación y modulación quedan para el segundo parcial"
+ ]}

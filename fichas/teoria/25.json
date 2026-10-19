@@ -1,0 +1,10 @@
+{"n": 25, "tipo": "teoria",
+ "resumen": "Reconstrucción matemática de la señal a partir de sus muestras: interpolación con funciones sinc desplazadas que surgen del filtro pasabajos ideal, y limitaciones del filtro real.",
+ "temas": ["Teorema de muestreo (Nyquist)", "Filtros", "Transformada de Fourier", "Convolución"],
+ "detalle": [
+  "Antitransformando el espectro filtrado: x(t) = Σ x(nTs)·sinc[ωmáx(t − nTs)]",
+  "Las sinc desplazadas forman una familia ortogonal: en cada instante de muestreo sólo una es distinta de cero",
+  "La respuesta impulsiva del pasabajos ideal es una sinc; la reconstrucción es la convolución de las muestras con ella",
+  "Con filtro ideal el proceso es totalmente reversible; un filtro real introduce distorsión que puede compensarse",
+  "El filtro ideal es no causal: sólo es aproximable almacenando la señal (no en tiempo real)"
+ ]}

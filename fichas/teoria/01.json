@@ -1,0 +1,11 @@
+{"n": 1, "tipo": "mixta",
+ "resumen": "Se deduce la atenuación de espacio libre a partir de la onda esférica y las antenas, se repasan unidades logarítmicas (dB, dBm) con ejercicios de enlace y cadenas de cuadripolos, y se cierra la introducción (antenas, satélites, líneas de transmisión).",
+ "temas": ["Atenuación y decibeles", "Atenuación de espacio libre", "Antenas (directividad y área efectiva)", "Propagación y línea de vista", "Líneas de transmisión", "Relación señal a ruido (SNR)"],
+ "detalle": [
+  "Flujo de potencia de onda esférica: Pt/(4πd²); potencia recibida = flujo × área efectiva (λ²/4π · D)",
+  "Atenuación de espacio libre: (4πd/λ)², en dB = 32,44 + 20 log d[km] + 20 log f[MHz]",
+  "La directividad de antenas pasivas actúa como 'ganancia' aparente; un elemento pasivo no puede amplificar",
+  "Los dB expresan siempre relaciones de potencia; no existen 'dB de tensión'; 0 dBm = 1 mW (0,775 V sobre 600 Ω)",
+  "Horizonte y línea de vista limitan el alcance: mástiles, repetidores de microondas y satélites geoestacionarios (~36000 km)",
+  "Líneas de transmisión: modelo RLCG distribuido; impedancia característica depende sólo de la geometría y el dieléctrico"
+ ]}

@@ -1,0 +1,3204 @@
+{
+ "bloques": [
+  {
+   "id": "b1",
+   "nombre": "Transmisión, atenuación y propagación",
+   "orden": 1,
+   "descripcion": "Unidades logarítmicas, atenuación de espacio libre, antenas, propagación y líneas de transmisión."
+  },
+  {
+   "id": "b2",
+   "nombre": "Fundamentos de señales y sistemas",
+   "orden": 2,
+   "descripcion": "Clasificación, energía y potencia de señales, análisis de Fourier, convolución, ancho de banda y filtros."
+  },
+  {
+   "id": "b3",
+   "nombre": "Ruido",
+   "orden": 3,
+   "descripcion": "Tipos y fuentes de ruido, ruido térmico y blanco, figura y temperatura de ruido de cuadripolos en cascada y SNR."
+  },
+  {
+   "id": "b4",
+   "nombre": "Información y capacidad",
+   "orden": 4,
+   "descripcion": "Cantidad y tasa de información, velocidad de señalización con señales M-arias y capacidad de canal de Shannon."
+  },
+  {
+   "id": "b5",
+   "nombre": "Muestreo, cuantificación y PCM",
+   "orden": 5,
+   "descripcion": "Teorema de muestreo, muestreo real, cuantificación uniforme y no uniforme, PCM y códigos de línea."
+  },
+  {
+   "id": "b6",
+   "nombre": "Multiplexación",
+   "orden": 6,
+   "descripcion": "Multiplexación por división de tiempo (TDM, PAM) y de frecuencia (FDM)."
+  },
+  {
+   "id": "b7",
+   "nombre": "Modulación lineal (DSB y AM)",
+   "orden": 7,
+   "descripcion": "Por qué modular, DSB sin portadora, AM con portadora, índice de modulación y demodulación sincrónica o por envolvente."
+  },
+  {
+   "id": "b8",
+   "nombre": "Receptores",
+   "orden": 8,
+   "descripcion": "Receptor de AM: selectividad con filtros resonantes, receptor superheterodino y control automático de ganancia."
+  },
+  {
+   "id": "b9",
+   "nombre": "Modulación angular (FM/PM)",
+   "orden": 9,
+   "descripcion": "Definición de FM y PM, índice de modulación, espectro por funciones de Bessel y ancho de banda de Carson."
+  }
+ ],
+ "temas": [
+  {
+   "id": "t1",
+   "nombre": "Atenuación y decibeles",
+   "bloque": "b1"
+  },
+  {
+   "id": "t2",
+   "nombre": "Atenuación de espacio libre",
+   "bloque": "b1"
+  },
+  {
+   "id": "t3",
+   "nombre": "Antenas (directividad y área efectiva)",
+   "bloque": "b1"
+  },
+  {
+   "id": "t4",
+   "nombre": "Propagación y línea de vista",
+   "bloque": "b1"
+  },
+  {
+   "id": "t5",
+   "nombre": "Líneas de transmisión",
+   "bloque": "b1"
+  },
+  {
+   "id": "t6",
+   "nombre": "Espectro electromagnético",
+   "bloque": "b1"
+  },
+  {
+   "id": "t7",
+   "nombre": "Señales y espectro",
+   "bloque": "b2"
+  },
+  {
+   "id": "t8",
+   "nombre": "Clasificación de señales",
+   "bloque": "b2"
+  },
+  {
+   "id": "t9",
+   "nombre": "Energía y potencia de señales",
+   "bloque": "b2"
+  },
+  {
+   "id": "t10",
+   "nombre": "Serie de Fourier",
+   "bloque": "b2"
+  },
+  {
+   "id": "t11",
+   "nombre": "Transformada de Fourier",
+   "bloque": "b2"
+  },
+  {
+   "id": "t12",
+   "nombre": "Teorema de Parseval / Rayleigh",
+   "bloque": "b2"
+  },
+  {
+   "id": "t13",
+   "nombre": "Convolución",
+   "bloque": "b2"
+  },
+  {
+   "id": "t14",
+   "nombre": "Ancho de banda",
+   "bloque": "b2"
+  },
+  {
+   "id": "t15",
+   "nombre": "Filtros",
+   "bloque": "b2"
+  },
+  {
+   "id": "t16",
+   "nombre": "Ruido (tipos y fuentes)",
+   "bloque": "b3"
+  },
+  {
+   "id": "t17",
+   "nombre": "Compatibilidad electromagnética",
+   "bloque": "b3"
+  },
+  {
+   "id": "t18",
+   "nombre": "Ruido térmico",
+   "bloque": "b3"
+  },
+  {
+   "id": "t19",
+   "nombre": "Ruido blanco",
+   "bloque": "b3"
+  },
+  {
+   "id": "t20",
+   "nombre": "Ruido en cuadripolos",
+   "bloque": "b3"
+  },
+  {
+   "id": "t21",
+   "nombre": "Ancho de banda equivalente de ruido",
+   "bloque": "b3"
+  },
+  {
+   "id": "t22",
+   "nombre": "Figura de ruido (fórmula de Friis)",
+   "bloque": "b3"
+  },
+  {
+   "id": "t23",
+   "nombre": "Temperatura equivalente de ruido",
+   "bloque": "b3"
+  },
+  {
+   "id": "t24",
+   "nombre": "Relación señal a ruido (SNR)",
+   "bloque": "b3"
+  },
+  {
+   "id": "t25",
+   "nombre": "Información y entropía",
+   "bloque": "b4"
+  },
+  {
+   "id": "t26",
+   "nombre": "Tasa de información",
+   "bloque": "b4"
+  },
+  {
+   "id": "t27",
+   "nombre": "Velocidad de señalización (baudios)",
+   "bloque": "b4"
+  },
+  {
+   "id": "t28",
+   "nombre": "Señales M-arias",
+   "bloque": "b4"
+  },
+  {
+   "id": "t29",
+   "nombre": "Capacidad de canal (Shannon)",
+   "bloque": "b4"
+  },
+  {
+   "id": "t30",
+   "nombre": "Teorema de muestreo (Nyquist)",
+   "bloque": "b5"
+  },
+  {
+   "id": "t31",
+   "nombre": "Aliasing",
+   "bloque": "b5"
+  },
+  {
+   "id": "t32",
+   "nombre": "Muestreo natural y flat-top",
+   "bloque": "b5"
+  },
+  {
+   "id": "t33",
+   "nombre": "Cuantificación uniforme",
+   "bloque": "b5"
+  },
+  {
+   "id": "t34",
+   "nombre": "Ruido de cuantificación",
+   "bloque": "b5"
+  },
+  {
+   "id": "t35",
+   "nombre": "Cuantificación no uniforme (companding, leyes A y μ)",
+   "bloque": "b5"
+  },
+  {
+   "id": "t36",
+   "nombre": "PCM",
+   "bloque": "b5"
+  },
+  {
+   "id": "t37",
+   "nombre": "Codificación de línea",
+   "bloque": "b5"
+  },
+  {
+   "id": "t38",
+   "nombre": "Sincronismo",
+   "bloque": "b5"
+  },
+  {
+   "id": "t39",
+   "nombre": "PAM",
+   "bloque": "b6"
+  },
+  {
+   "id": "t40",
+   "nombre": "Multiplexación por división de tiempo (TDM)",
+   "bloque": "b6"
+  },
+  {
+   "id": "t41",
+   "nombre": "Multiplexación por división de frecuencia (FDM)",
+   "bloque": "b6"
+  },
+  {
+   "id": "t42",
+   "nombre": "Modulación lineal y AM",
+   "bloque": "b7"
+  },
+  {
+   "id": "t43",
+   "nombre": "Doble banda lateral sin portadora (DSB)",
+   "bloque": "b7"
+  },
+  {
+   "id": "t44",
+   "nombre": "Índice de modulación (AM)",
+   "bloque": "b7"
+  },
+  {
+   "id": "t45",
+   "nombre": "Demodulación / detección",
+   "bloque": "b7"
+  },
+  {
+   "id": "t46",
+   "nombre": "Receptor superheterodino",
+   "bloque": "b8"
+  },
+  {
+   "id": "t47",
+   "nombre": "Control automático de ganancia (AGC)",
+   "bloque": "b8"
+  },
+  {
+   "id": "t48",
+   "nombre": "Modulación angular (FM/PM)",
+   "bloque": "b9"
+  },
+  {
+   "id": "t49",
+   "nombre": "Índice de modulación (FM)",
+   "bloque": "b9"
+  },
+  {
+   "id": "t50",
+   "nombre": "Ancho de banda de FM (Carson)",
+   "bloque": "b9"
+  }
+ ],
+ "ejercicios": [
+  {
+   "id": "e1",
+   "nombre": "Unidades logarítmicas (dB, dBm)",
+   "bloque": "b1",
+   "temas": [
+    "t1"
+   ]
+  },
+  {
+   "id": "e2",
+   "nombre": "Ganancia de cuadripolos en cascada (dB)",
+   "bloque": "b1",
+   "temas": [
+    "t1"
+   ]
+  },
+  {
+   "id": "e3",
+   "nombre": "Atenuación de espacio libre / enlace radioeléctrico",
+   "bloque": "b1",
+   "temas": [
+    "t2",
+    "t3"
+   ]
+  },
+  {
+   "id": "e4",
+   "nombre": "SNR en enlaces con repetidores",
+   "bloque": "b1",
+   "temas": [
+    "t24",
+    "t4"
+   ]
+  },
+  {
+   "id": "e5",
+   "nombre": "Longitud de onda y dimensionado de antenas (dipolo λ/2)",
+   "bloque": "b1",
+   "temas": [
+    "t3",
+    "t6"
+   ]
+  },
+  {
+   "id": "e6",
+   "nombre": "Potencia normalizada (señales de energía y potencia)",
+   "bloque": "b2",
+   "temas": [
+    "t9"
+   ]
+  },
+  {
+   "id": "e7",
+   "nombre": "Espectro de pulsos (serie y transformada de Fourier)",
+   "bloque": "b2",
+   "temas": [
+    "t10",
+    "t11"
+   ]
+  },
+  {
+   "id": "e8",
+   "nombre": "Energía en el espectro (Parseval, primer lóbulo)",
+   "bloque": "b2",
+   "temas": [
+    "t12"
+   ]
+  },
+  {
+   "id": "e9",
+   "nombre": "Espectros por convolución (pulso trapezoidal/triangular)",
+   "bloque": "b2",
+   "temas": [
+    "t13",
+    "t11"
+   ]
+  },
+  {
+   "id": "e10",
+   "nombre": "Modulación por producto (traslación espectral)",
+   "bloque": "b2",
+   "temas": [
+    "t11"
+   ]
+  },
+  {
+   "id": "e11",
+   "nombre": "Ruido térmico (kT, kTB)",
+   "bloque": "b3",
+   "temas": [
+    "t18",
+    "t19"
+   ]
+  },
+  {
+   "id": "e12",
+   "nombre": "Ancho de banda equivalente de ruido",
+   "bloque": "b3",
+   "temas": [
+    "t21"
+   ]
+  },
+  {
+   "id": "e13",
+   "nombre": "Figura de ruido / temperatura de ruido",
+   "bloque": "b3",
+   "temas": [
+    "t22",
+    "t23"
+   ]
+  },
+  {
+   "id": "e14",
+   "nombre": "Cascada de amplificadores (Friis)",
+   "bloque": "b3",
+   "temas": [
+    "t22",
+    "t23"
+   ]
+  },
+  {
+   "id": "e15",
+   "nombre": "Cálculo de SNR",
+   "bloque": "b3",
+   "temas": [
+    "t24"
+   ]
+  },
+  {
+   "id": "e16",
+   "nombre": "Cantidad de información de un mensaje/símbolo",
+   "bloque": "b4",
+   "temas": [
+    "t25"
+   ]
+  },
+  {
+   "id": "e17",
+   "nombre": "Tasa de información de una imagen/señal",
+   "bloque": "b4",
+   "temas": [
+    "t26"
+   ]
+  },
+  {
+   "id": "e18",
+   "nombre": "Capacidad de canal (Shannon)",
+   "bloque": "b4",
+   "temas": [
+    "t29"
+   ]
+  },
+  {
+   "id": "e19",
+   "nombre": "Velocidad de señalización (baudios) vs tasa de bits",
+   "bloque": "b4",
+   "temas": [
+    "t27",
+    "t26"
+   ]
+  },
+  {
+   "id": "e20",
+   "nombre": "Bits por símbolo (señales M-arias)",
+   "bloque": "b4",
+   "temas": [
+    "t28"
+   ]
+  },
+  {
+   "id": "e21",
+   "nombre": "Muestreo y aliasing (fs y filtro antialias)",
+   "bloque": "b5",
+   "temas": [
+    "t30",
+    "t31"
+   ]
+  },
+  {
+   "id": "e22",
+   "nombre": "Muestreo flat-top (efecto de apertura)",
+   "bloque": "b5",
+   "temas": [
+    "t32"
+   ]
+  },
+  {
+   "id": "e23",
+   "nombre": "Frecuencia de muestreo del CD (44,1 kHz)",
+   "bloque": "b5",
+   "temas": [
+    "t30",
+    "t32"
+   ]
+  },
+  {
+   "id": "e24",
+   "nombre": "Cuantificación (niveles, error, dígitos por muestra)",
+   "bloque": "b5",
+   "temas": [
+    "t33"
+   ]
+  },
+  {
+   "id": "e25",
+   "nombre": "SNR de cuantificación (6 dB por bit)",
+   "bloque": "b5",
+   "temas": [
+    "t34"
+   ]
+  },
+  {
+   "id": "e26",
+   "nombre": "Cuantificación no uniforme",
+   "bloque": "b5",
+   "temas": [
+    "t35"
+   ]
+  },
+  {
+   "id": "e27",
+   "nombre": "Codificación binaria (signo y magnitud)",
+   "bloque": "b5",
+   "temas": [
+    "t36",
+    "t33"
+   ]
+  },
+  {
+   "id": "e28",
+   "nombre": "PCM (tasa de bits, niveles)",
+   "bloque": "b5",
+   "temas": [
+    "t36",
+    "t26"
+   ]
+  },
+  {
+   "id": "e29",
+   "nombre": "Conversión paralelo-serie (duración de bit)",
+   "bloque": "b5",
+   "temas": [
+    "t36",
+    "t40"
+   ]
+  },
+  {
+   "id": "e30",
+   "nombre": "Ancho de banda de una señal PCM/binaria",
+   "bloque": "b5",
+   "temas": [
+    "t36",
+    "t14",
+    "t37"
+   ]
+  },
+  {
+   "id": "e31",
+   "nombre": "Multiplexación TDM/FDM",
+   "bloque": "b6",
+   "temas": [
+    "t40",
+    "t41"
+   ]
+  },
+  {
+   "id": "e32",
+   "nombre": "DSB/SSB (espectro, modulación y demodulación sincrónica)",
+   "bloque": "b7",
+   "temas": [
+    "t43",
+    "t45"
+   ]
+  },
+  {
+   "id": "e33",
+   "nombre": "Modulación AM (potencia, índice, espectro)",
+   "bloque": "b7",
+   "temas": [
+    "t42",
+    "t44"
+   ]
+  },
+  {
+   "id": "e34",
+   "nombre": "Selectividad: factor Q de filtros pasabanda",
+   "bloque": "b8",
+   "temas": [
+    "t15",
+    "t46"
+   ]
+  },
+  {
+   "id": "e35",
+   "nombre": "Receptor superheterodino (oscilador local, FI, frecuencia imagen)",
+   "bloque": "b8",
+   "temas": [
+    "t46"
+   ]
+  },
+  {
+   "id": "e36",
+   "nombre": "Modulación FM/PM (índice, ancho de banda de Carson)",
+   "bloque": "b9",
+   "temas": [
+    "t48",
+    "t49",
+    "t50"
+   ]
+  },
+  {
+   "id": "e37",
+   "nombre": "Espectro de FM con funciones de Bessel",
+   "bloque": "b9",
+   "temas": [
+    "t48",
+    "t49"
+   ]
+  }
+ ],
+ "relaciones": [
+  {
+   "de": "t1",
+   "a": "t2",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t3",
+   "a": "t2",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t1",
+   "a": "t22",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t2",
+   "a": "t24",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t6",
+   "a": "t3",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t7",
+   "a": "t10",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t10",
+   "a": "t11",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t9",
+   "a": "t12",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t11",
+   "a": "t12",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t11",
+   "a": "t14",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t13",
+   "a": "t11",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t11",
+   "a": "t15",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t18",
+   "a": "t19",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t19",
+   "a": "t21",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t20",
+   "a": "t21",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t20",
+   "a": "t22",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t22",
+   "a": "t23",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t18",
+   "a": "t24",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t24",
+   "a": "t29",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t14",
+   "a": "t29",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t25",
+   "a": "t26",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t27",
+   "a": "t26",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t28",
+   "a": "t27",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t11",
+   "a": "t30",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t13",
+   "a": "t30",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t15",
+   "a": "t30",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t30",
+   "a": "t31",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t30",
+   "a": "t32",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t30",
+   "a": "t36",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t33",
+   "a": "t34",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t34",
+   "a": "t35",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t33",
+   "a": "t36",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t26",
+   "a": "t36",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t36",
+   "a": "t37",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t37",
+   "a": "t38",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t30",
+   "a": "t39",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t39",
+   "a": "t40",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t36",
+   "a": "t40",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t38",
+   "a": "t40",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t11",
+   "a": "t43",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t3",
+   "a": "t42",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t43",
+   "a": "t42",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t43",
+   "a": "t45",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t38",
+   "a": "t45",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t42",
+   "a": "t44",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t42",
+   "a": "t41",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t42",
+   "a": "t46",
+   "tipo": "prerrequisito"
+  },
+  {
+   "de": "t15",
+   "a": "t46",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t47",
+   "a": "t46",
+   "tipo": "se usa en"
+  },
+  {
+   "de": "t42",
+   "a": "t48",
+   "tipo": "prerrequisito"
+  }
+ ],
+ "clases": [
+  {
+   "n": 1,
+   "fecha": "12-08-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 24,
+   "titulo": "Comunicaciones - Clase Virtual 12-08-2024",
+   "link": "https://www.youtube.com/watch?v=LA8BsIVKs8Q",
+   "tipo": "mixta",
+   "resumen": "Se deduce la atenuación de espacio libre a partir de la onda esférica y las antenas, se repasan unidades logarítmicas (dB, dBm) con ejercicios de enlace y cadenas de cuadripolos, y se cierra la introducción (antenas, satélites, líneas de transmisión).",
+   "detalle": [
+    "Flujo de potencia de onda esférica: Pt/(4πd²); potencia recibida = flujo × área efectiva (λ²/4π · D)",
+    "Atenuación de espacio libre: (4πd/λ)², en dB = 32,44 + 20 log d[km] + 20 log f[MHz]",
+    "La directividad de antenas pasivas actúa como 'ganancia' aparente; un elemento pasivo no puede amplificar",
+    "Los dB expresan siempre relaciones de potencia; no existen 'dB de tensión'; 0 dBm = 1 mW (0,775 V sobre 600 Ω)",
+    "Horizonte y línea de vista limitan el alcance: mástiles, repetidores de microondas y satélites geoestacionarios (~36000 km)",
+    "Líneas de transmisión: modelo RLCG distribuido; impedancia característica depende sólo de la geometría y el dieléctrico"
+   ],
+   "temas": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t24"
+   ],
+   "ejercicios": [
+    "e3",
+    "e1",
+    "e2",
+    "e4"
+   ],
+   "referencias": [
+    "Guía de ejercicios unidad 1 (introducción)"
+   ],
+   "misma_clase_que": 2
+  },
+  {
+   "n": 2,
+   "fecha": "12-08-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 1,
+   "titulo": "Comunicaciones Clase del 12-8-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=_LyDk4b0vaE",
+   "tipo": "mixta",
+   "resumen": "Parte 1 de la clase del 12-08-2024 (misma clase que la n.º 1): deducción de la atenuación de espacio libre y uso de unidades logarítmicas en un enlace y en una cadena de cuadripolos.",
+   "detalle": [
+    "Flujo de potencia de onda esférica Pt/(4πd²) y potencia recibida = flujo × área efectiva",
+    "Área efectiva de antena: λ²/(4π) · D; la directividad concentra la energía radiada",
+    "Atenuación de espacio libre (4πd/λ)²; en dB: 32,44 + 20 log d[km] + 20 log f[MHz]",
+    "La curvatura terrestre (horizonte) limita el alcance: se eleva la antena con mástiles",
+    "Los dB son relaciones de potencia: no hay 'dB de tensión'; con impedancias distintas hay que pasar por potencia"
+   ],
+   "temas": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t24"
+   ],
+   "ejercicios": [
+    "e3",
+    "e1",
+    "e2"
+   ],
+   "referencias": [],
+   "misma_clase_que": 1
+  },
+  {
+   "n": 3,
+   "fecha": "12-08-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 2,
+   "titulo": "Comunicaciones Clase del 12-8-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=HU2JX4XyXlU",
+   "tipo": "mixta",
+   "resumen": "Parte 2 de la clase del 12-08-2024 (misma clase que la n.º 1): niveles en dBm, radioenlaces con repetidores, ganancia de antenas pasivas vs. activos, radar, satélites y repaso del apunte introductorio (espectro, Maxwell, líneas de transmisión).",
+   "detalle": [
+    "dBm: 0 dBm = 1 mW (0,775 V sobre 600 Ω); trabajar todo en veces o todo en dB, sin mezclar",
+    "Radioenlaces de microondas con repetidores por el horizonte; respaldo de la fibra óptica",
+    "La directividad de una antena pasiva se suma como 'ganancia', pero sólo los elementos activos amplifican (energía de la alimentación)",
+    "Radar: distancia por tiempo de ida y vuelta; satélites geoestacionarios a ~36000 km",
+    "Espectro electromagnético y ecuaciones de Maxwell (resumen del apunte)",
+    "Líneas de transmisión: modelo RLCG; impedancia característica según geometría y dieléctrico"
+   ],
+   "temas": [
+    "t1",
+    "t3",
+    "t4",
+    "t6",
+    "t5"
+   ],
+   "ejercicios": [
+    "e1",
+    "e2",
+    "e4"
+   ],
+   "referencias": [
+    "Guía de ejercicios unidad 1 (introducción)"
+   ],
+   "misma_clase_que": 1
+  },
+  {
+   "n": 4,
+   "fecha": "21-08-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 10,
+   "titulo": "Comunicaciones - Clase 2 - Sistemas de conmunicacion (21 08 2025)",
+   "link": "https://www.youtube.com/watch?v=C6DL79a8QvA",
+   "tipo": "teoria",
+   "resumen": "Inicio de la unidad de Señales: clasificación de señales y cálculo de energía y potencia normalizada, con la potencia de una senoide como ejemplo.",
+   "detalle": [
+    "De una señal interesan sobre todo su potencia y su ancho de banda; dominio del tiempo y de la frecuencia se relacionan de forma biunívoca",
+    "Tiempo continuo (analógica), tiempo discreto (muestreada) y digital (tiempo y amplitud discretos); la binaria es un caso particular de la digital",
+    "Determinísticas vs. aleatorias; periódicas vs. aperiódicas (en la práctica ninguna señal real es estrictamente periódica ni determinística)",
+    "Señal de energía: energía finita y no nula; señal de potencia: energía infinita y potencia finita",
+    "Potencia normalizada (R = 1 Ω); senoide de amplitud A: P = A²/2; el valor eficaz no se usa en la materia",
+    "Frecuencia angular ω = 2πf = 2π/T"
+   ],
+   "temas": [
+    "t7",
+    "t8",
+    "t9"
+   ],
+   "ejercicios": [
+    "e6"
+   ],
+   "referencias": [],
+   "misma_clase_que": null
+  },
+  {
+   "n": 5,
+   "fecha": "29-08-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 22,
+   "titulo": "Comunicacion 29-08-2024",
+   "link": "https://www.youtube.com/watch?v=H-YHqyuJNOg",
+   "tipo": "teoria",
+   "resumen": "Introducción al ruido: tipos y fuentes, interferencias y compatibilidad electromagnética, y caracterización del ruido térmico desde Boltzmann y Planck hasta la potencia disponible kTB.",
+   "detalle": [
+    "Ruido: señal aleatoria indeseada superpuesta a la útil; se distingue de zumbido, interferencias y distorsión (evitables)",
+    "Fuentes: artificiales (impulsivas), naturales (atmosféricas, solares, galácticas) y de circuito (shot, 1/f, partición, térmico)",
+    "Compatibilidad vs. susceptibilidad electromagnética; regulación del espectro por la UIT (bandas de AM y FM)",
+    "Ruido térmico (Johnson-Nyquist): densidad espectral de Planck hf/(e^(hf/kT)−1) ≈ kT para hf/kT ≤ 0,1",
+    "A 290 K es plana hasta ~600 GHz: se trata como ruido blanco; kT ≈ 4·10⁻²¹ W/Hz = −174 dBm/Hz",
+    "Tensión cuadrática media 4kTRB; potencia disponible (con adaptación) N = kTB, independiente de R"
+   ],
+   "temas": [
+    "t16",
+    "t17",
+    "t18",
+    "t19",
+    "t24"
+   ],
+   "ejercicios": [
+    "e11",
+    "e1"
+   ],
+   "referencias": [],
+   "misma_clase_que": 6
+  },
+  {
+   "n": 6,
+   "fecha": "29-08-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 3,
+   "titulo": "Comunicaciones Clase del 29-8-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=7Ggw3ADz4GE",
+   "tipo": "teoria",
+   "resumen": "Parte 1 de la clase del 29-08-2024 (misma clase que la n.º 5): tipos y fuentes de ruido, compatibilidad electromagnética y origen físico del ruido térmico (Boltzmann, Planck).",
+   "detalle": [
+    "Ruido: proceso aleatorio indeseado; interferencias, zumbido y distorsión no son estrictamente ruido",
+    "Fuentes artificiales, naturales y de circuito (shot, 1/f, partición, térmico)",
+    "Compatibilidad vs. susceptibilidad electromagnética; la UIT asigna bandas (AM 530–1700 kHz, FM 88–108 MHz)",
+    "Ruido térmico por colisiones de electrones: media cero, varianza no nula, energía térmica kT",
+    "Radiación de cuerpo negro y cuantización de Planck (E = hf) dan la densidad espectral del ruido térmico"
+   ],
+   "temas": [
+    "t16",
+    "t17",
+    "t18",
+    "t24"
+   ],
+   "ejercicios": [
+    "e11"
+   ],
+   "referencias": [],
+   "misma_clase_que": 5
+  },
+  {
+   "n": 7,
+   "fecha": "29-08-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 4,
+   "titulo": "Comunicaciones Clase del 29-8-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=8E4gL1yrm4o",
+   "tipo": "teoria",
+   "resumen": "Parte 2 de la clase del 29-08-2024 (misma clase que la n.º 5): el ruido térmico como ruido blanco y la potencia disponible de ruido kTB.",
+   "detalle": [
+    "Para hf/kT ≤ 0,1 la densidad espectral es ≈ kT: plana hasta ~600 GHz a 290 K",
+    "kT a 290 K ≈ 4·10⁻²¹ W/Hz ≈ −174 dBm/Hz; al bajar la temperatura baja el nivel y el límite de frecuencia",
+    "Única propiedad predecible: el valor cuadrático medio, 4kTRB (modelos Thévenin y Norton)",
+    "Potencia disponible (máxima transferencia, carga adaptada): N = kTB, no depende de R"
+   ],
+   "temas": [
+    "t18",
+    "t19"
+   ],
+   "ejercicios": [
+    "e11",
+    "e1"
+   ],
+   "referencias": [],
+   "misma_clase_que": 5
+  },
+  {
+   "n": 8,
+   "fecha": "02-09-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 21,
+   "titulo": "Comunicacion 02-09-2024",
+   "link": "https://www.youtube.com/watch?v=hZjA5tVVnSo",
+   "tipo": "teoria",
+   "resumen": "Ruido en cuadripolos: transferencia de la densidad espectral, ancho de banda equivalente de ruido y definición de la figura (cifra) de ruido, incluida la fórmula de Friis para cascadas.",
+   "detalle": [
+    "Resistor real = resistor ideal + generador de ruido (modelos Thévenin/Norton); con adaptación se transfiere kTB",
+    "Densidad espectral de salida = densidad de entrada × |H(f)|²; con ruido blanco a la entrada la forma la da el filtro",
+    "Densidad espectral y autocorrelación son par de Fourier; el ruido térmico se trata como proceso ergódico",
+    "Ancho de banda equivalente de ruido: rectángulo de igual área; para un RC vale (π/2)·B(−3 dB) ≈ 1,57·B",
+    "Figura de ruido F = SNR entrada / SNR salida ≥ 1; los pasivos atenúan la señal pero no el ruido; los activos agregan ruido propio",
+    "Cascada (Friis): F = F1 + (F2−1)/G1 + (F3−1)/(G1G2)…; la primera etapa debe ser de bajo ruido y alta ganancia"
+   ],
+   "temas": [
+    "t18",
+    "t19",
+    "t20",
+    "t21",
+    "t22",
+    "t24"
+   ],
+   "ejercicios": [
+    "e12",
+    "e13",
+    "e14"
+   ],
+   "referencias": [],
+   "misma_clase_que": 9
+  },
+  {
+   "n": 9,
+   "fecha": "02-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 5,
+   "titulo": "Comunicaciones Clase del 2-9-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=PQ83hXtUQi0",
+   "tipo": "teoria",
+   "resumen": "Parte 1 de la clase del 02-09-2024 (misma clase que la n.º 8): modelo de ruido de resistores, cuadripolos, densidad espectral a través de un cuadripolo y ancho de banda equivalente de ruido.",
+   "detalle": [
+    "Resistor real = resistor ideal + generador de ruido; con adaptación (antena–receptor) se transfiere la potencia máxima kTB",
+    "Cuadripolos: parámetros de admitancia e impedancia; transferencia = respuesta/excitación",
+    "Densidad espectral de salida = densidad de entrada × |H(f)|²; autocorrelación y densidad espectral son par de Fourier",
+    "Ruido térmico como proceso ergódico: autocorrelación tipo delta",
+    "Ancho de banda equivalente de ruido: para un RC es π/2 veces el ancho de banda de −3 dB",
+    "Un dispositivo activo amplifica el ruido de entrada y agrega su propio ruido"
+   ],
+   "temas": [
+    "t18",
+    "t19",
+    "t20",
+    "t21"
+   ],
+   "ejercicios": [
+    "e12",
+    "e13"
+   ],
+   "referencias": [],
+   "misma_clase_que": 8
+  },
+  {
+   "n": 10,
+   "fecha": "02-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 6,
+   "titulo": "Comunicaciones Clase del 2-9-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=zqsVnETbbE0",
+   "tipo": "teoria",
+   "resumen": "Parte 2 de la clase del 02-09-2024 (misma clase que la n.º 8): figura de ruido en cuadripolos pasivos y activos y fórmula de Friis para amplificadores en cascada.",
+   "detalle": [
+    "En un pasivo la señal se atenúa pero el ruido kTB no: la SNR empeora",
+    "Figura de ruido F = SNR entrada / SNR salida, siempre > 1 (ideal 0 dB)",
+    "Activo: F = 1 + Na/(G·Ni); sólo los elementos disipativos generan ruido",
+    "Cascada (Friis): F = F1 + (F2−1)/G1 + …; la primera etapa fija la figura de ruido total"
+   ],
+   "temas": [
+    "t22",
+    "t24",
+    "t18"
+   ],
+   "ejercicios": [
+    "e13",
+    "e14"
+   ],
+   "referencias": [],
+   "misma_clase_que": 8
+  },
+  {
+   "n": 11,
+   "fecha": "03-09-2026",
+   "anio": 2026,
+   "playlist": "A",
+   "pos": 25,
+   "titulo": "Comunicaciones - Sistemas Comunicacion 03-09-2026",
+   "link": "https://www.youtube.com/watch?v=H-HJXS0lrKk",
+   "tipo": "teoria",
+   "resumen": "Espectro del tren de pulsos rectangulares y energía en el lóbulo principal, y propiedades de la transformada de Fourier útiles para la materia: linealidad, modulación, desplazamiento temporal y convolución.",
+   "detalle": [
+    "Espectro de amplitud par y de fase impar; pulsos más angostos requieren más ancho de banda; la separación de armónicas depende del período",
+    "El lóbulo principal del pulso rectangular contiene ~90 % de la energía (Rayleigh, integración numérica de sinc²)",
+    "Propiedad de modulación: multiplicar por una portadora cos(ω0t) traslada el espectro a ±ω0 y duplica el ancho de banda",
+    "Desplazamiento temporal sólo agrega fase lineal: no cambia ni potencia ni ancho de banda",
+    "Convolución en el tiempo = producto de espectros; dos pulsos rectangulares dan un trapecio (o triángulo si son iguales, espectro sinc²)"
+   ],
+   "temas": [
+    "t10",
+    "t11",
+    "t7",
+    "t14",
+    "t12",
+    "t13"
+   ],
+   "ejercicios": [
+    "e7",
+    "e8",
+    "e9"
+   ],
+   "referencias": [],
+   "misma_clase_que": null
+  },
+  {
+   "n": 12,
+   "fecha": "05-09-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 20,
+   "titulo": "Comunicacion Clase Virtual 05-09-2024",
+   "link": "https://www.youtube.com/watch?v=xYVGvHYWaR4",
+   "tipo": "mixta",
+   "resumen": "Cierre de la teoría de ruido (fórmula de Friis y temperatura equivalente de ruido) seguido de ejercicios de cascadas antena–preamplificador–cable–receptor.",
+   "detalle": [
+    "Fórmula de Friis para cascadas: F = F1 + (F2−1)/G1 + (F3−1)/(G1G2); se opera en veces, con ganancias de potencia",
+    "Temperatura equivalente de ruido: el ruido propio del amplificador se modela como kTeB a la entrada (temperatura ficticia)",
+    "F = 1 + Te/T0 (referencia 290 K); en cascada Te,total = Te1 + Te2/G1 + …",
+    "Un pasivo tiene figura de ruido igual a su atenuación (cable de 3 dB → F = 2); un splitter suma pérdidas de inserción",
+    "El preamplificador debe ir al pie de la antena: un atenuador antes del amplificador degrada la SNR",
+    "La temperatura de antena resume el ruido del entorno; N = k·Ta·B con B fijado por el receptor"
+   ],
+   "temas": [
+    "t22",
+    "t23",
+    "t18",
+    "t24",
+    "t3"
+   ],
+   "ejercicios": [
+    "e13",
+    "e14",
+    "e11",
+    "e15"
+   ],
+   "referencias": [
+    "Guía de ejercicios de ruido"
+   ],
+   "misma_clase_que": 13
+  },
+  {
+   "n": 13,
+   "fecha": "05-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 7,
+   "titulo": "Comunicaciones Clase del 5-9-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=L3w-COZGi1Q",
+   "tipo": "mixta",
+   "resumen": "Parte 1 de la clase del 05-09-2024 (misma clase que la n.º 12): fórmula de Friis, temperatura equivalente de ruido y primer ejercicio de ubicación del preamplificador.",
+   "detalle": [
+    "Cascada (Friis): F = F1 + (F2−1)/G1 + …; el ruido es aditivo y se acota a las primeras etapas",
+    "Temperatura equivalente de ruido: ruido propio del amplificador modelado como kTeB en la entrada; F = 1 + Te/T0",
+    "La figura de ruido de un pasivo es igual a su atenuación",
+    "Antena Yagi: dipolo plegado, directores y reflector (cultura general)",
+    "Poner el preamplificador después del cable empeora la figura de ruido total"
+   ],
+   "temas": [
+    "t22",
+    "t23",
+    "t18",
+    "t3"
+   ],
+   "ejercicios": [
+    "e13",
+    "e14"
+   ],
+   "referencias": [
+    "Guía de ejercicios de ruido"
+   ],
+   "misma_clase_que": 12
+  },
+  {
+   "n": 14,
+   "fecha": "05-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 8,
+   "titulo": "Comunicaciones Clase del 5-9-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=W5YJHlcp3U0",
+   "tipo": "practica",
+   "resumen": "Parte 2 de la clase del 05-09-2024 (misma clase que la n.º 12): continuación de los ejercicios de cascadas de ruido (con y sin preamplificador).",
+   "detalle": [
+    "Sin preamplificador la figura de ruido crece mucho y exige más potencia de transmisión",
+    "El receptor necesita una SNR mínima a su entrada; la figura de ruido de la cadena indica cuánta SNR hace falta en antena"
+   ],
+   "temas": [
+    "t22",
+    "t24"
+   ],
+   "ejercicios": [
+    "e14",
+    "e13",
+    "e15"
+   ],
+   "referencias": [],
+   "misma_clase_que": 12
+  },
+  {
+   "n": 15,
+   "fecha": "05-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 9,
+   "titulo": "Comunicaciones Clase del 5-9-2024 Parte 3",
+   "link": "https://www.youtube.com/watch?v=SVDe8okmo0E",
+   "tipo": "practica",
+   "resumen": "Parte 3 de la clase del 05-09-2024 (misma clase que la n.º 12): cálculo de la SNR necesaria en antena y de la potencia de ruido a partir de la temperatura de antena.",
+   "detalle": [
+    "La temperatura equivalente de antena incluye el ruido del entorno (gases, vegetación, etc.)",
+    "Potencia de ruido en antena N = k·Ta·B, con el ancho de banda fijado por el receptor",
+    "Sistema adaptado en impedancia: la potencia de ruido es kTB"
+   ],
+   "temas": [
+    "t23",
+    "t24",
+    "t22"
+   ],
+   "ejercicios": [
+    "e11",
+    "e15",
+    "e13"
+   ],
+   "referencias": [],
+   "misma_clase_que": 12
+  },
+  {
+   "n": 16,
+   "fecha": "11-09-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 9,
+   "titulo": "Comunicaciones - Ruido 11 09 2025",
+   "link": "https://www.youtube.com/watch?v=SykKx8AEvzA",
+   "tipo": "mixta",
+   "resumen": "Deducción de la figura de ruido de cuadripolos en cascada (Friis) y de la temperatura equivalente de ruido, con nociones de antenas y un ejercicio sobre la ubicación del preamplificador.",
+   "detalle": [
+    "Friis: F = F1 + (F2−1)/G1 + (F3−1)/(G1G2)…, en veces; vale si los anchos de banda no aumentan a lo largo de la cadena",
+    "Temperatura equivalente: el ruido propio Na se refleja a la entrada como k·Te·B; F = 1 + Te/T0 con T0 = 290 K",
+    "Friis también se expresa con temperaturas equivalentes; el piso de ruido de un instrumento se toma a 290 K",
+    "Dipolo de λ/2, monopolo λ/4 con plano de tierra, reflector parabólico y antena Yagi; la modulación permite antenas de tamaño razonable",
+    "Pasivos: F igual a la atenuación; el preamplificador debe ir junto a la antena (sensibilidad del receptor = SNR mínima)"
+   ],
+   "temas": [
+    "t22",
+    "t23",
+    "t3",
+    "t24"
+   ],
+   "ejercicios": [
+    "e13",
+    "e14",
+    "e5"
+   ],
+   "referencias": [
+    "Guía de ejercicios de ruido"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 17,
+   "fecha": "12-09-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 19,
+   "titulo": "Comunicacion 12-09-2024",
+   "link": "https://www.youtube.com/watch?v=CthUaA6Tt2o",
+   "tipo": "mixta",
+   "resumen": "Ejercicios de teoría de la información (tasa de información de imágenes y video, capacidad de canal) y desarrollo teórico de la velocidad de señalización en baudios frente a la tasa de bits.",
+   "detalle": [
+    "Teorema fundamental: si R ≤ C existe una codificación que permite transmitir sin errores",
+    "Baudio: un evento de señalización (símbolo) por segundo; se calcula con el pulso más corto, s = 1/τmín",
+    "Los pulsos de arranque y parada (sincronismo) cuentan para la señalización pero no llevan información de la fuente: R < s",
+    "Un símbolo M-ario lleva log2 M bits: R = s·log2 M; 1 baudio = 1 bit/s sólo en el caso binario",
+    "Los símbolos pueden ser amplitudes o fases (4 fases → 2 bits por símbolo); repaso de sistemas de numeración posicionales"
+   ],
+   "temas": [
+    "t25",
+    "t26",
+    "t29",
+    "t27",
+    "t28"
+   ],
+   "ejercicios": [
+    "e17",
+    "e18",
+    "e16",
+    "e19",
+    "e20"
+   ],
+   "referencias": [
+    "Guía de ejercicios de teoría de la información (ej. 7 y 8)"
+   ],
+   "misma_clase_que": 18
+  },
+  {
+   "n": 18,
+   "fecha": "12-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 10,
+   "titulo": "Comunicaciones Clase del 12-9-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=SNp_B_CzxsE",
+   "tipo": "mixta",
+   "resumen": "Parte 1 de la clase del 12-09-2024 (misma clase que la n.º 17): ejercicios de tasa de información y capacidad de canal, y definición de la velocidad de señalización en baudios a partir del telex.",
+   "detalle": [
+    "Información por píxel = log2(niveles); tasa de video = bits/píxel × píxeles × cuadros/s",
+    "Capacidad de Shannon C = B·log2(1 + S/N); si R ≤ C existe una codificación sin errores",
+    "Baudio: eventos de señalización por segundo, s = 1/τmín",
+    "El sincronismo (pulsos de arranque/parada) consume tiempo sin información de la fuente: R < s"
+   ],
+   "temas": [
+    "t25",
+    "t26",
+    "t29",
+    "t27"
+   ],
+   "ejercicios": [
+    "e17",
+    "e18",
+    "e16",
+    "e19"
+   ],
+   "referencias": [
+    "Guía de ejercicios de teoría de la información (ej. 7 y 8)"
+   ],
+   "misma_clase_que": 17
+  },
+  {
+   "n": 19,
+   "fecha": "12-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 11,
+   "titulo": "Comunicaciones Clase del 12-9-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=Vtzrr2nyJVE",
+   "tipo": "teoria",
+   "resumen": "Parte 2 de la clase del 12-09-2024 (misma clase que la n.º 17): relación entre baudios y bits por segundo con pulsos M-arios y símbolos de fase.",
+   "detalle": [
+    "Un pulso M-ario lleva log2 M bits (cuaternario 2, octal 3)",
+    "R = s·log2 M; baudio y bit/s coinciden sólo con pulsos binarios",
+    "Sistemas de numeración posicionales (decimal, binario, ternario)",
+    "Un símbolo puede ser una amplitud o una fase: 4 fases codifican 2 bits"
+   ],
+   "temas": [
+    "t27",
+    "t26",
+    "t28"
+   ],
+   "ejercicios": [
+    "e20",
+    "e19"
+   ],
+   "referencias": [],
+   "misma_clase_que": 17
+  },
+  {
+   "n": 20,
+   "fecha": "17-09-2026",
+   "anio": 2026,
+   "playlist": "A",
+   "pos": 26,
+   "titulo": "Comunicacion 17-09-2026 Ejercicios Tp1 y Tp2",
+   "link": "https://www.youtube.com/watch?v=GUkYl6_pyUs",
+   "tipo": "practica",
+   "resumen": "Clase de ejercicios: cierre de un problema de ruido en cascada y resolución de espectros por convolución gráfica (impulso, coseno pulsado, trenes de pulsos).",
+   "detalle": [
+    "El impulso (delta de Dirac) tiene espectro plano en todas las frecuencias",
+    "Coseno pulsado (señal de radar): producto de portadora por tren de pulsos → el espectro sinc discreto se traslada a ±f0",
+    "Convolucionar con un par de impulsos desplaza copias; en frecuencia equivale a multiplicar por un coseno",
+    "Retardo de grupo: derivada de la fase respecto de la frecuencia; distintas frecuencias atraviesan el canal con distinto retardo"
+   ],
+   "temas": [
+    "t11",
+    "t13",
+    "t7"
+   ],
+   "ejercicios": [
+    "e14",
+    "e11",
+    "e15",
+    "e7",
+    "e9",
+    "e10"
+   ],
+   "referencias": [
+    "TP 1",
+    "TP 2",
+    "1er parcial",
+    "Recuperatorio"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 21,
+   "fecha": "19-09-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 17,
+   "titulo": "Comunicacion parte 2 19-09-19",
+   "link": "https://www.youtube.com/watch?v=uJdyw6IIu-Y",
+   "tipo": "teoria",
+   "resumen": "Desarrollo matemático del muestreo ideal con un tren de impulsos, espectro de la señal muestreada y reconstrucción mediante filtro pasabajos ideal.",
+   "detalle": [
+    "Muestreo ideal: xs(t) = x(t)·Σδ(t − nTs); cada impulso toma el valor de la señal en nTs",
+    "En frecuencia: convolución con un peine de impulsos → réplicas del espectro (alias) cada ωs",
+    "Reconstrucción: filtro pasabajos ideal con corte en ωs/2 que conserva sólo el alias principal (banda base)",
+    "La transformada directa de la señal muestreada da Σ x(nTs)·e^(−jωnTs) (propiedad de desplazamiento temporal)"
+   ],
+   "temas": [
+    "t30",
+    "t31",
+    "t11",
+    "t15"
+   ],
+   "ejercicios": [],
+   "referencias": [
+    "Guía de TP 1 (peine de impulsos, mencionada)",
+    "Examen final (tema muestreo)"
+   ],
+   "misma_clase_que": 24
+  },
+  {
+   "n": 22,
+   "fecha": "19-09-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 18,
+   "titulo": "Comunicacion parte 1 19-09-2024",
+   "link": "https://www.youtube.com/watch?v=xAmDgeH_cpQ",
+   "tipo": "teoria",
+   "resumen": "Inicio de la digitalización de señales (PCM): muestreo con tren de impulsos, condición de Nyquist, aliasing y reconstrucción, con énfasis en que la frecuencia de muestreo la define el filtro antialias.",
+   "detalle": [
+    "PCM = muestreo + cuantificación + codificación",
+    "Requisito: señal limitada en banda, lo que sólo garantiza un filtro pasabajos previo (filtro antialias)",
+    "Multiplicar por un peine de impulsos modula sus amplitudes; en frecuencia el espectro se replica cada fs (alias)",
+    "fs ≥ 2fmáx evita el solapamiento; si no, aparece aliasing y la señal no se recupera",
+    "Reconstrucción con pasabajos (ideal = brick-wall); los filtros reales tienen pendiente y se caracterizan por el factor de forma",
+    "La frecuencia de muestreo se elige según la respuesta del filtro, no según el contenido supuesto de la señal"
+   ],
+   "temas": [
+    "t36",
+    "t30",
+    "t31",
+    "t15",
+    "t11"
+   ],
+   "ejercicios": [
+    "e21"
+   ],
+   "referencias": [],
+   "misma_clase_que": 23
+  },
+  {
+   "n": 23,
+   "fecha": "19-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 12,
+   "titulo": "Comunicaciones Clase del 19-9-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=e3AKtKKMkwg",
+   "tipo": "teoria",
+   "resumen": "Parte 1 de la clase del 19-09-2024 (misma clase que la n.º 22): introducción a PCM, muestreo, aliasing y reconstrucción, y elección de la frecuencia de muestreo según el filtro antialias.",
+   "detalle": [
+    "PCM = muestreo + cuantificación + codificación",
+    "La señal debe estar limitada en banda por un filtro pasabajos (antialias)",
+    "El muestreo replica el espectro en múltiplos de fs; con fs < 2fmáx los alias se solapan (aliasing)",
+    "Recuperación con filtro pasabajos; filtro real con pendiente y factor de forma",
+    "La frecuencia de muestreo la define el filtro, no la señal"
+   ],
+   "temas": [
+    "t36",
+    "t30",
+    "t31",
+    "t15"
+   ],
+   "ejercicios": [
+    "e21"
+   ],
+   "referencias": [],
+   "misma_clase_que": 22
+  },
+  {
+   "n": 24,
+   "fecha": "19-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 13,
+   "titulo": "Comunicaciones Clase del 19-9-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=OofmBqRf5WM",
+   "tipo": "teoria",
+   "resumen": "Parte 2 de la clase del 19-09-2024 (misma clase que la n.º 21): formulación matemática del muestreo ideal, espectro de la señal muestreada y reconstrucción con filtro ideal.",
+   "detalle": [
+    "xs(t) = x(t)·Σδ(t − nTs): el producto con el peine retiene x(nTs)",
+    "Espectro muestreado: (ωs/2π)·Σ X(ω − nωs), réplicas en múltiplos de ωs",
+    "Un filtro pasabajos ideal con corte en ωs/2 recupera el alias principal",
+    "Por transformada directa: Xs(ω) = Σ x(nTs)·e^(−jωnTs)"
+   ],
+   "temas": [
+    "t30",
+    "t31",
+    "t11",
+    "t15"
+   ],
+   "ejercicios": [],
+   "referencias": [
+    "Guía de TP 1 (peine de impulsos, mencionada)",
+    "Examen final (tema muestreo)"
+   ],
+   "misma_clase_que": 21
+  },
+  {
+   "n": 25,
+   "fecha": "23-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 14,
+   "titulo": "Comunicaciones Clase del 23-9-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=fb8ZQ12ozfk",
+   "tipo": "teoria",
+   "resumen": "Reconstrucción matemática de la señal a partir de sus muestras: interpolación con funciones sinc desplazadas que surgen del filtro pasabajos ideal, y limitaciones del filtro real.",
+   "detalle": [
+    "Antitransformando el espectro filtrado: x(t) = Σ x(nTs)·sinc[ωmáx(t − nTs)]",
+    "Las sinc desplazadas forman una familia ortogonal: en cada instante de muestreo sólo una es distinta de cero",
+    "La respuesta impulsiva del pasabajos ideal es una sinc; la reconstrucción es la convolución de las muestras con ella",
+    "Con filtro ideal el proceso es totalmente reversible; un filtro real introduce distorsión que puede compensarse",
+    "El filtro ideal es no causal: sólo es aproximable almacenando la señal (no en tiempo real)"
+   ],
+   "temas": [
+    "t30",
+    "t15",
+    "t11",
+    "t13"
+   ],
+   "ejercicios": [],
+   "referencias": [],
+   "misma_clase_que": null
+  },
+  {
+   "n": 26,
+   "fecha": "23-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 15,
+   "titulo": "Comunicaciones Clase del 23-9-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=0mcY70-XEG0",
+   "tipo": "teoria",
+   "resumen": "Discusión conceptual sobre la frecuencia de muestreo: con la señal limitada en banda, sobremuestrear no mejora la reconstrucción, porque entre dos muestras la señal no puede variar más rápido de lo que permite el filtro.",
+   "detalle": [
+    "El muestreo es reversible sin pérdida de información (con leve distorsión compensable o latencia)",
+    "Mito: “más muestras = mejor”; si fs ≥ 2fmáx la reconstrucción ya es exacta",
+    "Entre dos muestras no puede haber variaciones de frecuencia mayor que la del filtro antialias",
+    "Analogía con la temperatura de una sala: muestrear más rápido que la dinámica de la señal es redundante"
+   ],
+   "temas": [
+    "t30",
+    "t15"
+   ],
+   "ejercicios": [],
+   "referencias": [],
+   "misma_clase_que": null
+  },
+  {
+   "n": 27,
+   "fecha": "25-09-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 8,
+   "titulo": "Comunicacion 25 09 2025 - ejercicios TP 3",
+   "link": "https://www.youtube.com/watch?v=_ImAzR7QSTM",
+   "tipo": "practica",
+   "resumen": "Clase de ejercicios de la guía 3: muestreo con distintas fs, aliasing, muestreo flat-top, cuantificación uniforme y no uniforme y asignación de códigos binarios.",
+   "detalle": [
+    "El filtro ideal es no causal; sólo se aproxima en forma digital con buffer (introduce latencia)",
+    "El aliasing con tonos puros se comporta como una distorsión (aparecen frecuencias que no estaban)",
+    "Muestreo flat-top: efecto de apertura (inclinación del espectro) que se compensa ecualizando",
+    "Error máximo de cuantificación = ΔQ/2; la cantidad de dígitos binarios debe ser entera",
+    "Codificación signo-magnitud; multiplexación y modulación quedan para el segundo parcial"
+   ],
+   "temas": [
+    "t30",
+    "t31",
+    "t33"
+   ],
+   "ejercicios": [
+    "e21",
+    "e22",
+    "e24",
+    "e26",
+    "e27"
+   ],
+   "referencias": [
+    "TP 3 (Guía 3)",
+    "1er parcial",
+    "2do parcial"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 28,
+   "fecha": "26-09-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 16,
+   "titulo": "Comunicacion 26-09-2024",
+   "link": "https://www.youtube.com/watch?v=F3dHP3F5ZWo",
+   "tipo": "teoria",
+   "resumen": "Muestreo real (natural y flat-top/sample & hold) con su efecto de apertura, origen de los 44,1 kHz del CD, y cuantificación uniforme: error, potencia del ruido de cuantificación y SNR en función de los bits.",
+   "detalle": [
+    "Muestreo natural: los alias quedan ponderados por una sinc (atenuados); flat-top con circuito sample & hold (capacitor, llaves MOSFET, seguidor)",
+    "Efecto de apertura: inclinación sinc del espectro recuperado, corregible por ecualización",
+    "44,1 kHz surge de grabar audio digital sobre video (3 muestras/línea × 294 líneas × 50 campos/s)",
+    "Cuantificación uniforme (escalones ΔQ iguales); la no uniforme se logra con un compresor + cuantificador uniforme",
+    "Error de cuantificación: aleatorio, uniforme en ±ΔQ/2, media nula, potencia Nq = ΔQ²/12",
+    "S/Nq = 3M² → 4,77 + 6,02·n dB (≈ 6 dB por bit); 16 bits (CD) ≈ 96 dB; cuantificar es redondear"
+   ],
+   "temas": [
+    "t30",
+    "t32",
+    "t33",
+    "t34",
+    "t36"
+   ],
+   "ejercicios": [
+    "e25",
+    "e23"
+   ],
+   "referencias": [
+    "Examen final (cuantificación)",
+    "Parcial"
+   ],
+   "misma_clase_que": 29
+  },
+  {
+   "n": 29,
+   "fecha": "26-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 16,
+   "titulo": "Comunicaciones Clase del 26-9-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=jyqS7uJqhrc",
+   "tipo": "teoria",
+   "resumen": "Parte 1 de la clase del 26-09-2024 (misma clase que la n.º 28): muestreo natural y flat-top, efecto de apertura, origen de los 44,1 kHz y comienzo de la cuantificación uniforme.",
+   "detalle": [
+    "Los impulsos ideales no existen: muestreo natural (alias atenuados según una sinc) y flat-top con sample & hold",
+    "Efecto de apertura del flat-top, compensable por ecualización",
+    "La frecuencia de 44,1 kHz del CD proviene de grabar audio digital en cintas de video",
+    "Cuantificación: discretizar amplitudes; uniforme vs. no uniforme (compresor + cuantificador uniforme)",
+    "Niveles de decisión y error de cuantificación máximo ΔQ/2"
+   ],
+   "temas": [
+    "t32",
+    "t30",
+    "t33",
+    "t36"
+   ],
+   "ejercicios": [
+    "e23"
+   ],
+   "referencias": [],
+   "misma_clase_que": 28
+  },
+  {
+   "n": 30,
+   "fecha": "26-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 17,
+   "titulo": "Comunicaciones Clase del 26-9-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=HNv15scu0sk",
+   "tipo": "teoria",
+   "resumen": "Parte 2 de la clase del 26-09-2024 (misma clase que la n.º 28): el error de cuantificación como variable aleatoria uniforme y la relación señal a ruido de cuantificación.",
+   "detalle": [
+    "El error de cuantificación es aleatorio (no hay sincronismo entre señal y muestreo; también influye el ruido)",
+    "Distribución uniforme en ±ΔQ/2 con densidad 1/ΔQ y media nula",
+    "Potencia del ruido de cuantificación = varianza = ΔQ²/12",
+    "S/Nq = 3M² → ≈ 6 dB por bit; con 16 bits ≈ 96 dB (CD)"
+   ],
+   "temas": [
+    "t33",
+    "t34",
+    "t24"
+   ],
+   "ejercicios": [
+    "e25"
+   ],
+   "referencias": [
+    "Examen final (cuantificación)",
+    "Parcial"
+   ],
+   "misma_clase_que": 28
+  },
+  {
+   "n": 31,
+   "fecha": "29-09-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 7,
+   "titulo": "Comunicaciones 29 09 2025",
+   "link": "https://www.youtube.com/watch?v=Vz_eAyvsz_s",
+   "tipo": "teoria",
+   "resumen": "Demostración matemática de la reconstrucción por suma de sinc ortogonales ponderadas por las muestras, y cuantificación no uniforme con companding (leyes A y μ) para mantener constante la SNR de cuantificación.",
+   "detalle": [
+    "Xs(ω) = Σ x(nTs)·e^(−jωnTs); aplicando el pasabajos ideal y antitransformando: x(t) = Σ x(nTs)·sinc[ωmáx(t − nTs)]",
+    "Las sinc desplazadas Ts forman una familia ortogonal: la reconstrucción es exacta, no una interpolación aproximada (análogo a la serie de Fourier)",
+    "Con cuantificación uniforme Nq = ΔQ²/12 es constante y la SNR cae para señales débiles",
+    "Companding: compresión logarítmica + cuantificador uniforme + expansión inversa; leyes μ (EE.UU./Japón) y A (resto del mundo)",
+    "Ley A por 13 segmentos: palabra de 8 bits (signo, 3 bits de segmento, 4 de nivel) que rinde como ~10–12 bits en niveles bajos",
+    "Útil para la voz, cuya amplitud es baja la mayor parte del tiempo"
+   ],
+   "temas": [
+    "t30",
+    "t11",
+    "t15",
+    "t33",
+    "t35",
+    "t34"
+   ],
+   "ejercicios": [
+    "e26"
+   ],
+   "referencias": [
+    "Examen final (muestreo y reconstrucción)",
+    "1er parcial"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 32,
+   "fecha": "30-09-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 14,
+   "titulo": "Comunicacion 30-29-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=76Kp3wywZSk",
+   "tipo": "teoria",
+   "resumen": "Representación eléctrica de los dígitos binarios de PCM, tasa de información de una señal digitalizada, conversión paralelo–serie y ancho de banda necesario para transmitir PCM.",
+   "detalle": [
+    "Lógica positiva o negativa; pulsos unipolares o bipolares para representar 0 y 1",
+    "Más bits = más SNR: 16 bits ≈ 96 dB; audio profesional 20–24 bits (cada bit duplica los niveles)",
+    "Tasa PCM: R = fs · n (ej. 48 kHz × 16 = 768 kbit/s)",
+    "Paso de n líneas paralelas a una serie con una llave conmutadora: duración de cada bit = Ts/n",
+    "Ancho de banda de PCM entre R/2 (filtro ideal, 2 bits por ciclo) y R; en el curso se toma R/2"
+   ],
+   "temas": [
+    "t36",
+    "t26",
+    "t14",
+    "t37"
+   ],
+   "ejercicios": [
+    "e25",
+    "e28",
+    "e29",
+    "e30"
+   ],
+   "referencias": [],
+   "misma_clase_que": 35
+  },
+  {
+   "n": 33,
+   "fecha": "30-09-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 15,
+   "titulo": "Comunicacion 30-29-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=slL7HsTbT9U",
+   "tipo": "teoria",
+   "resumen": "Repaso de la SNR de cuantificación (6 dB por bit), la señal digitalizada como tabla de números, motivación y funcionamiento de la cuantificación no uniforme (leyes A y μ) y codificación PCM de las muestras.",
+   "detalle": [
+    "S/Nq = 4,77 + 6·n dB; cada muestra cuantificada es un número binario de n dígitos",
+    "Digitalizar es reemplazar la forma de onda por números; la cuantificación es irreversible pero el error puede hacerse imperceptible",
+    "Con Nq fijo la SNR instantánea cae con el nivel de la señal; la no uniforme busca SNR constante (escalones chicos para señales bajas)",
+    "Compresión logarítmica (leyes μ y A) aproximada por 13 segmentos con pendientes que se duplican",
+    "Palabra de 8 bits: polaridad + segmento (3) + nivel (4); equivale a 60 dB en niveles bajos y 24 dB en altos",
+    "Codificación de niveles (natural o signo-magnitud); MSB y LSB definen el orden de lectura"
+   ],
+   "temas": [
+    "t33",
+    "t34",
+    "t35",
+    "t36"
+   ],
+   "ejercicios": [
+    "e25",
+    "e26",
+    "e27"
+   ],
+   "referencias": [
+    "1er parcial (temas hasta digitalización)"
+   ],
+   "misma_clase_que": 34
+  },
+  {
+   "n": 34,
+   "fecha": "30-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 18,
+   "titulo": "Comunicaciones Clase del 30-9-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=M0GzobAf450",
+   "tipo": "teoria",
+   "resumen": "Parte 1 de la clase del 30-09-2024 (misma clase que la n.º 33): repaso de la SNR de cuantificación y desarrollo de la cuantificación no uniforme con leyes A y μ por segmentos.",
+   "detalle": [
+    "S/Nq = 4,77 + 6·n dB; cada muestra cuantificada es un número binario de n dígitos",
+    "La señal digitalizada es una tabla de números; la cuantificación es un redondeo irreversible",
+    "Con cuantificación uniforme la SNR instantánea depende del nivel de la señal",
+    "Compresión logarítmica (leyes μ y A) aproximada por 13 segmentos con pendientes que se duplican"
+   ],
+   "temas": [
+    "t33",
+    "t34",
+    "t35"
+   ],
+   "ejercicios": [
+    "e25",
+    "e26",
+    "e27"
+   ],
+   "referencias": [
+    "1er parcial (temas hasta digitalización)"
+   ],
+   "misma_clase_que": 33
+  },
+  {
+   "n": 35,
+   "fecha": "30-09-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 19,
+   "titulo": "Comunicaciones Clase del 30-9-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=CBFftUH0Qyg",
+   "tipo": "teoria",
+   "resumen": "Parte 2 de la clase del 30-09-2024 (misma clase que la n.º 32): resultado de la cuantificación no uniforme, codificación de las muestras y representación eléctrica, tasa y ancho de banda de PCM.",
+   "detalle": [
+    "Ley A con palabra de 8 bits (polaridad, segmento, nivel): ~60 dB en niveles bajos y 24 dB en altos",
+    "Codificación de niveles (natural o signo-magnitud); MSB y LSB",
+    "Lógica positiva/negativa, pulsos unipolares o bipolares",
+    "R = fs · n; conversión paralelo–serie con duración de bit Ts/n",
+    "Ancho de banda de PCM entre R/2 (ideal) y R"
+   ],
+   "temas": [
+    "t35",
+    "t36",
+    "t26",
+    "t14",
+    "t37"
+   ],
+   "ejercicios": [
+    "e26",
+    "e27",
+    "e28",
+    "e29",
+    "e30"
+   ],
+   "referencias": [],
+   "misma_clase_que": 32
+  },
+  {
+   "n": 36,
+   "fecha": "01-10-2026",
+   "anio": 2026,
+   "playlist": "A",
+   "pos": 27,
+   "titulo": "Comunicaciones 01-10-2026",
+   "link": "https://www.youtube.com/watch?v=rJZWhFHWFyg",
+   "tipo": "teoria",
+   "resumen": "Cuantificación uniforme: error de cuantificación como variable aleatoria uniforme, potencia del ruido de cuantificación y relación S/Nq en función de la cantidad de dígitos binarios.",
+   "detalle": [
+    "Se cuantifican las muestras (redondeo) a niveles separados ΔQ; N = rango dinámico / ΔQ",
+    "Error de cuantificación acotado en ±ΔQ/2, uniforme, de media nula; potencia Nq = ΔQ²/12",
+    "S/Nq = 3N²; con N = 2^n → 4,77 + 6·n dB (6 dB por dígito binario)",
+    "CD: 16 bits ≈ 96 dB (65.536 niveles); 20 bits ≈ 120 dB",
+    "Repaso de sistemas numéricos posicionales (binario/decimal); un dígito decimal equivale a log2 10 ≈ 3,32 bits",
+    "La cuantificación hace irreversible la digitalización; la cantidad de bits se elige para que el error sea imperceptible"
+   ],
+   "temas": [
+    "t33",
+    "t34",
+    "t36"
+   ],
+   "ejercicios": [
+    "e25",
+    "e24",
+    "e27"
+   ],
+   "referencias": [],
+   "misma_clase_que": null
+  },
+  {
+   "n": 37,
+   "fecha": "02-10-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 6,
+   "titulo": "Clase Repaso primer parcial - 02 10 2025",
+   "link": "https://www.youtube.com/watch?v=ijqpv4HF8RA",
+   "tipo": "repaso",
+   "resumen": "Clase de repaso para el primer parcial resolviendo ejercicios de teoría de la información, ruido en cascada, espectros por convolución gráfica y digitalización, con pautas de evaluación.",
+   "detalle": [
+    "Unidades del primer parcial: espectro, teoría de la información, ruido y digitalización",
+    "Se repasa que la fase (seno vs. coseno, desplazamientos) no altera el espectro de amplitud",
+    "Se insiste en razonar los problemas en lugar de aplicar fórmulas de memoria"
+   ],
+   "temas": [],
+   "ejercicios": [
+    "e17",
+    "e19",
+    "e20",
+    "e18",
+    "e14",
+    "e13",
+    "e15",
+    "e9",
+    "e7",
+    "e28",
+    "e24"
+   ],
+   "referencias": [
+    "Repaso 1er parcial",
+    "1er parcial"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 38,
+   "fecha": "02-10-2025",
+   "anio": 2025,
+   "playlist": "B",
+   "pos": 26,
+   "titulo": "Comunicaciones Modulación Angular",
+   "link": "https://www.youtube.com/watch?v=15y7CVQrwzk",
+   "tipo": "teoria",
+   "resumen": "Introducción a la modulación angular: definición de PM y FM según qué varía linealmente con el mensaje, relación entre fase y frecuencia instantánea, índice de modulación para un tono y potencia constante.",
+   "detalle": [
+    "En AM varía la envolvente; en modulación angular la amplitud es constante y el mensaje está en el ángulo θ(t)",
+    "Frecuencia instantánea ωi = ωc + dθ/dt; desviación Δω = dθ/dt",
+    "PM: θ(t) = kp·x(t) (fase lineal con el mensaje); FM: Δf = kf·x(t), θ(t) = kω∫x(t)dt",
+    "En PM la desviación de frecuencia sigue a la derivada del mensaje: ambas modulan fase y frecuencia a la vez",
+    "Con un tono: φ(t) = Ac·cos(ωct + β·sen ωmt), β = kω·Am/ωm; con tonos FM y PM no se distinguen a simple vista",
+    "La potencia de la onda modulada angularmente es constante (fasor de amplitud fija que oscila en ángulo)"
+   ],
+   "temas": [
+    "t48",
+    "t49",
+    "t42"
+   ],
+   "ejercicios": [
+    "e36"
+   ],
+   "referencias": [
+    "Recuperatorio 1er parcial",
+    "Examen final (definición FM/PM)"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 39,
+   "fecha": "03-10-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 13,
+   "titulo": "Comunicacion 03-10-2024",
+   "link": "https://www.youtube.com/watch?v=sfm7Dp7jPgg",
+   "tipo": "teoria",
+   "resumen": "Códigos de línea para transmitir o grabar pulsos binarios: clasificación (unipolar/bipolar, RZ/NRZ, por nivel o por símbolo), sincronismo y requerimientos que llevan a elegir códigos bifásicos tipo Manchester.",
+   "detalle": [
+    "Ancho de un pulso real medido al 50 % de amplitud; ancho de banda de la señal binaria ≈ R/2",
+    "Clasificación: unipolar/bipolar, lógica positiva/negativa, RZ/NRZ, codificación por nivel (L) o por símbolo (marca M / espacio S)",
+    "El receptor necesita sincronismo (analogías del disparo del osciloscopio y la lámpara estroboscópica); conviene extraerlo de la propia señal",
+    "Requisitos: valor medio nulo (bipolar), fuente de sincronismo (transiciones permanentes, RZ) e insensibilidad a la polaridad (por símbolo)",
+    "Sin componente de continua se pueden usar transformadores (aislación galvánica) y evitar capacitores de bloqueo",
+    "Bifásico/Manchester por símbolo cumple los tres requisitos; se usa en AES/EBU y en grabación magnética y CD"
+   ],
+   "temas": [
+    "t37",
+    "t36",
+    "t38"
+   ],
+   "ejercicios": [
+    "e24"
+   ],
+   "referencias": [
+    "Trabajo práctico de digitalización (ej. 3)",
+    "1er parcial"
+   ],
+   "misma_clase_que": 40
+  },
+  {
+   "n": 40,
+   "fecha": "03-10-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 20,
+   "titulo": "Comunicaciones Clase del 3-10-2024 Parte 1",
+   "link": "https://www.youtube.com/watch?v=xDWu924X5wQ",
+   "tipo": "teoria",
+   "resumen": "Parte 1 de la clase del 03-10-2024 (misma clase que la n.º 39): pulsos reales, ancho de banda de la señal binaria, clasificación de códigos de línea y necesidad de sincronismo.",
+   "detalle": [
+    "Ancho del pulso medido al 50 %; ancho de banda de la señal binaria ≈ R/2",
+    "Códigos unipolares/bipolares, RZ/NRZ, por nivel o por símbolo (marca/espacio)",
+    "Sincronismo: el receptor debe saber cuándo evaluar cada pulso (osciloscopio, lámpara estroboscópica)",
+    "Requisitos del código: valor medio nulo, fuente de sincronismo e insensibilidad a la polaridad",
+    "Al invertir los cables, los códigos por nivel invierten la secuencia binaria"
+   ],
+   "temas": [
+    "t37",
+    "t38",
+    "t36"
+   ],
+   "ejercicios": [],
+   "referencias": [],
+   "misma_clase_que": 39
+  },
+  {
+   "n": 41,
+   "fecha": "03-10-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 21,
+   "titulo": "Comunicaciones Clase del 3-10-2024 Parte 2",
+   "link": "https://www.youtube.com/watch?v=ofyRZ-qpKSo",
+   "tipo": "teoria",
+   "resumen": "Parte 2 de la clase del 03-10-2024 (misma clase que la n.º 39): códigos bifásicos (Manchester), justificación del valor medio nulo y un primer ejercicio de cuantificación.",
+   "detalle": [
+    "Los códigos por símbolo son insensibles a la polaridad",
+    "Bifásicos: bipolares y con transición a mitad de bit; Manchester por símbolo cumple todos los requisitos (dos frecuencias para 1 y 0)",
+    "Útil en grabación magnética y CD, donde la polaridad puede invertirse",
+    "Valor medio nulo: permite entradas con transformador (aislación galvánica) y evita capacitores electrolíticos de bloqueo",
+    "El número de dígitos binarios debe ser entero (error máximo = ΔQ/2)"
+   ],
+   "temas": [
+    "t37",
+    "t33"
+   ],
+   "ejercicios": [
+    "e24"
+   ],
+   "referencias": [
+    "Trabajo práctico de digitalización (ej. 3)",
+    "1er parcial"
+   ],
+   "misma_clase_que": 39
+  },
+  {
+   "n": 42,
+   "fecha": "08-10-2026",
+   "anio": 2026,
+   "playlist": "A",
+   "pos": 28,
+   "titulo": "Comunicaciones - 08-10-2026",
+   "link": "https://www.youtube.com/watch?v=EJ98Chrc0-s",
+   "tipo": "mixta",
+   "resumen": "Ejercicios de cuantificación de la guía 3 con desarrollo teórico de la cuantificación no uniforme para voz, el ancho de banda de un flujo PCM y la multiplexación por división de tiempo con llaves conmutadoras.",
+   "detalle": [
+    "La voz es una señal de tipo ráfaga: con cuantificación no uniforme 8 bits rinden ~70 dB frente a 48 dB uniformes",
+    "Telefonía: fs = 8 kHz × 8 bits = 64 kbit/s, luego reducidos por compresión con pérdidas; la coma flotante es una forma de cuantificación no uniforme",
+    "Al digitalizar, la señal pasa a ser un flujo de números (señal numérica)",
+    "Ancho de banda de un flujo binario: R/2 en el caso ideal (peor caso: alternancia de unos y ceros)",
+    "TDM: una llave toma muestras de cada canal en sincronismo con la llave receptora; debe girar al ritmo del canal más rápido para no perder muestras",
+    "Agrupar canales en llaves jerárquicas iguala las tasas y reduce el ancho de banda necesario"
+   ],
+   "temas": [
+    "t33",
+    "t35",
+    "t36",
+    "t14",
+    "t40"
+   ],
+   "ejercicios": [
+    "e22",
+    "e24",
+    "e26",
+    "e27",
+    "e28",
+    "e30",
+    "e31"
+   ],
+   "referencias": [
+    "TP 3 (Guía de digitalización, ej. 3 a 6)",
+    "1er parcial"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 43,
+   "fecha": "12-10-2026",
+   "anio": 2026,
+   "playlist": "A",
+   "pos": 29,
+   "titulo": "Comunicaciones - Repaso Primer Parcial 12-10-2026",
+   "link": "https://www.youtube.com/watch?v=NWwlD9uyMjY",
+   "tipo": "repaso",
+   "resumen": "Clase de consultas previa al primer parcial: dudas sobre ruido en cascada, espectros por convolución, velocidad de señalización, cuantificación y muestreo flat-top, más un ejercicio integrador de información y capacidad.",
+   "detalle": [
+    "En un receptor el ancho de banda se reduce por etapas: un único filtro con Q tan alto no es realizable",
+    "La velocidad de señalización se calcula con el pulso más corto, incluidos los de arranque y parada",
+    "Para no perder información la capacidad del canal debe superar la tasa de señalización física, no sólo la tasa de información",
+    "Pulsos M-arios llevan log2 M bits; los binarios son los más robustos frente a errores"
+   ],
+   "temas": [],
+   "ejercicios": [
+    "e14",
+    "e13",
+    "e9",
+    "e19",
+    "e22",
+    "e24",
+    "e17",
+    "e18",
+    "e20"
+   ],
+   "referencias": [
+    "Repaso 1er parcial",
+    "Guía 1 (ej. 6)",
+    "Guía 2 (ej. 8)",
+    "Guía 3 (ej. 2)",
+    "1er parcial"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 44,
+   "fecha": "13-10-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 5,
+   "titulo": "Comunicacion - Multiplexor, Inicio Modulacion Lineal - 2025 10 13",
+   "link": "https://www.youtube.com/watch?v=I0jnet85dcE",
+   "tipo": "mixta",
+   "resumen": "Se cierra la multiplexación por división de tiempo con un ejercicio (tramas, sincronismo, señal PAM) y comienza la modulación lineal: doble banda lateral sin portadora, moduladores no lineales o variantes en el tiempo y demodulación sincrónica.",
+   "detalle": [
+    "TDM: la llave gira a N × la frecuencia de muestreo del canal más rápido; trama = al menos una muestra de cada canal",
+    "Agrupando canales lentos en llaves secundarias se reduce el ancho de banda (144 → 72 kHz); las llaves deben estar sincronizadas (marcas de trama)",
+    "La salida de la llave es una señal PAM; multiplexar muestras analógicas ocupa menos ancho de banda que multiplexar PCM",
+    "Modulación lineal: produce un número finito de bandas laterales; x(t)·cos ωct traslada el espectro a ±fc (BLS y BLI) sin portadora (DBL-SP / DSB-SC)",
+    "El modulador debe ser no lineal o lineal variante en el tiempo (conmutación, transistor, anillo de diodos)",
+    "Demodulación sincrónica: multiplicar por una portadora local de igual frecuencia y fase y filtrar pasabajos (se obtiene x(t)/2)"
+   ],
+   "temas": [
+    "t40",
+    "t39",
+    "t42",
+    "t43",
+    "t45"
+   ],
+   "ejercicios": [
+    "e9",
+    "e7",
+    "e31",
+    "e28",
+    "e32"
+   ],
+   "referencias": [
+    "1er parcial (resolución del ejercicio de espectro)",
+    "Guía de multiplexación",
+    "2do parcial"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 45,
+   "fecha": "16-10-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 3,
+   "titulo": "Comuinicacion - Parte 2 Modulacion 2025 10 16",
+   "link": "https://www.youtube.com/watch?v=Zvqg_PW1ug8",
+   "tipo": "teoria",
+   "resumen": "Por qué modular (tamaño de antena y reparto del espectro radioeléctrico con distintas portadoras) y análisis de la demodulación sincrónica de doble banda lateral sin portadora con errores de frecuencia y fase del oscilador local.",
+   "detalle": [
+    "La antena debe medir ~λ/2 (o λ/4 con plano de tierra): en banda base sería inviable; con portadoras de MHz es realizable",
+    "Asignando portadoras distintas varias emisoras comparten el espectro radioeléctrico sin interferirse",
+    "Receptor DBL-SP: producto con oscilador local y filtro pasabajos; salida ½·x(t)·cos(Δω·t + θ)",
+    "Error de fase: atenúa la salida (cos θ; se anula con π/2)",
+    "Error de frecuencia: corre las componentes y destruye la relación armónica (efecto “Pato Donald”); se corrige con el clarificador",
+    "Sin portadora transmitida hace falta un operador; enviando la portadora (AM) el receptor puede ser automático y masivo"
+   ],
+   "temas": [
+    "t42",
+    "t43",
+    "t45",
+    "t3",
+    "t41"
+   ],
+   "ejercicios": [
+    "e5",
+    "e32"
+   ],
+   "referencias": [
+    "Recuperatorio 1er parcial"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 46,
+   "fecha": "16-10-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 4,
+   "titulo": "Comunicacion - Resolucion 1re Parcial 2025 10 16 Parte 1",
+   "link": "https://www.youtube.com/watch?v=F0iofbW2oAA",
+   "tipo": "practica",
+   "resumen": "Resolución completa del primer parcial: espectro por convolución, potencia, ruido en cascada con temperaturas equivalentes, tasa de información de video, capacidad de canal y digitalización multicanal.",
+   "detalle": [
+    "La potencia de una senoide es A²/2 sobre la resistencia (se usa valor pico, no eficaz)",
+    "La antena es la fuente de señal y ruido: no forma parte de la cascada de Friis",
+    "Aumentar el ancho de banda eleva el ruido kTB y baja la SNR; la figura de ruido de la cadena no cambia"
+   ],
+   "temas": [],
+   "ejercicios": [
+    "e7",
+    "e9",
+    "e10",
+    "e6",
+    "e11",
+    "e13",
+    "e14",
+    "e15",
+    "e17",
+    "e30",
+    "e19",
+    "e18",
+    "e25",
+    "e24",
+    "e28"
+   ],
+   "referencias": [
+    "Resolución 1er parcial 2025",
+    "Recuperatorio 1er parcial"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 47,
+   "fecha": "17-10-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 12,
+   "titulo": "Comunicaciones - Clase Repaso 1re Parcial 17-10-2024",
+   "link": "https://www.youtube.com/watch?v=S_JqQ2eodmw",
+   "tipo": "repaso",
+   "resumen": "Clase de consultas de repaso para el primer parcial: dudas de muestreo flat-top, espectros por convolución de pulsos cosenoidales, ancho de banda de PCM, ruido y codificación de fuentes discretas.",
+   "detalle": [
+    "Ancho de banda de una señal binaria ≈ R/2 en el caso ideal (dos bits por ciclo); en la práctica ~20 % más según el filtro",
+    "La temperatura equivalente de ruido es un concepto ficticio, no termodinámico",
+    "La información se calcula con la probabilidad de los símbolos de la fuente, no de los pulsos que los codifican"
+   ],
+   "temas": [],
+   "ejercicios": [
+    "e22",
+    "e7",
+    "e9",
+    "e8",
+    "e30",
+    "e16",
+    "e17",
+    "e13",
+    "e14",
+    "e11",
+    "e15",
+    "e24",
+    "e25",
+    "e28",
+    "e19",
+    "e18",
+    "e20"
+   ],
+   "referencias": [
+    "Repaso 1er parcial",
+    "TP3 ejercicio 12",
+    "Problema de examen (ruido en cascada)"
+   ],
+   "misma_clase_que": 48
+  },
+  {
+   "n": 48,
+   "fecha": "17-10-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 22,
+   "titulo": "Comunicaciones Clase del  17-10-2024 (repaso parcial)",
+   "link": "https://www.youtube.com/watch?v=CoHtxKElgVE",
+   "tipo": "repaso",
+   "resumen": "Misma clase de repaso para el primer parcial que la n.º 47 (otra grabación): consultas sobre muestreo flat-top, espectros por convolución, ancho de banda de PCM, ruido y codificación de fuentes.",
+   "detalle": [
+    "Ancho de banda de una señal binaria ≈ R/2 en el caso ideal",
+    "La temperatura equivalente de ruido es un concepto ficticio, no termodinámico",
+    "La información se calcula a partir de los símbolos de la fuente, no de los pulsos"
+   ],
+   "temas": [],
+   "ejercicios": [
+    "e22",
+    "e7",
+    "e9",
+    "e8",
+    "e30",
+    "e16",
+    "e17",
+    "e13",
+    "e14",
+    "e11",
+    "e15",
+    "e24",
+    "e25",
+    "e28",
+    "e19",
+    "e18",
+    "e20"
+   ],
+   "referencias": [
+    "Repaso 1er parcial",
+    "TP3 ejercicio 12",
+    "Problema de examen (ruido en cascada)"
+   ],
+   "misma_clase_que": 47
+  },
+  {
+   "n": 49,
+   "fecha": "20-10-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 2,
+   "titulo": "Comunicaciones 20-10-2025",
+   "link": "https://www.youtube.com/watch?v=aXWWuWCevpU",
+   "tipo": "teoria",
+   "resumen": "Modulación AM (DSB con portadora de gran potencia): análisis fasorial, espectro para un tono y demodulación por detector de envolvente frente a detección sincrónica. Cierre con contexto de radiodifusión y propagación de ondas de radio.",
+   "detalle": [
+    "φAM = Ac(1+m·cos ωmt)·cos ωct, m = Am/Ac; sobremodulación si m>1",
+    "Fasores: pico Ac+Am, valle Ac−Am; diferencia con DSB sin portadora",
+    "Espectro para un tono: portadora Ac/2 y laterales m·Ac/4 (doble signo)",
+    "Detector de envolvente (diodo + RC): distorsión si m>1; detección sincrónica sin esa limitación",
+    "Propagación: línea de vista >100 MHz, onda de superficie en LF, reflexión ionosférica en HF, satélite geoestacionario (~36.000 km)"
+   ],
+   "temas": [
+    "t42",
+    "t43",
+    "t44",
+    "t45",
+    "t6",
+    "t4"
+   ],
+   "ejercicios": [
+    "e33",
+    "e5"
+   ],
+   "referencias": [
+    "Recuperatorio 1er parcial (fechas 27 y 30 de octubre)"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 50,
+   "fecha": "28-10-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 23,
+   "titulo": "Comunicaciones Clase del 28-10-2024",
+   "link": "https://www.youtube.com/watch?v=vNqrNdbeINI",
+   "tipo": "teoria",
+   "resumen": "Problemas de la demodulación sincrónica de DSB sin portadora por errores de frecuencia y fase, y paso a AM (DSB con portadora): forma de onda, índice de modulación, espectro y detector de envolvente con control automático de ganancia.",
+   "detalle": [
+    "DSB-SC: error de fase da factor cos Δθ (fading, nulo a 90°); error de frecuencia rompe la relación armónica y la inteligibilidad",
+    "Frecuencia y fase están ligadas: la fase solo cambia variando la frecuencia",
+    "AM = DSB + portadora Ac; m = Am/Ac; envolvente cruza cero si m>1",
+    "Pico Ac(1+m), valle Ac(1−m); m = (Apico−Avalle)/(Apico+Avalle)",
+    "Detector de envolvente: diodo, carga rápida (Rd·C) y descarga lenta (Rc·C), capacitor de desacople",
+    "El nivel de continua del detector permite el control automático de ganancia"
+   ],
+   "temas": [
+    "t43",
+    "t45",
+    "t38",
+    "t42",
+    "t44",
+    "t47"
+   ],
+   "ejercicios": [
+    "e32",
+    "e33",
+    "e5"
+   ],
+   "referencias": [],
+   "misma_clase_que": null
+  },
+  {
+   "n": 51,
+   "fecha": "31-10-2024",
+   "anio": 2024,
+   "playlist": "A",
+   "pos": 11,
+   "titulo": "Comunicacion 31-10-2024",
+   "link": "https://www.youtube.com/watch?v=M7NkJyZczpk",
+   "tipo": "teoria",
+   "resumen": "Repaso de DSB-SC, AM y detector de envolvente, y desarrollo del receptor de AM: espectro radioeléctrico, filtros resonantes RLC y selectividad (Q), y principio del receptor superheterodino con frecuencia intermedia.",
+   "detalle": [
+    "Mapa del espectro: AM, onda corta, TV, FM, banda aeronáutica, celulares, WiFi, satélites; bandas LF a EHF",
+    "Resonantes serie/paralelo: f0 = 1/(2π√LC), cortes a −3 dB, dualidad",
+    "Selectividad Q = f0/B; f0 = √(fci·fcs); Q≥10 da simetría aritmética",
+    "Filtro sintonizable de RF tiene bajo Q; el filtro fijo de FI permite alto Q y ganancia",
+    "Superheterodino: oscilador local fOL = fc + FI (465 kHz en AM), mezclador y FI fija; multiplicador de Q en etapas"
+   ],
+   "temas": [
+    "t6",
+    "t15",
+    "t46",
+    "t45",
+    "t42"
+   ],
+   "ejercicios": [
+    "e34",
+    "e35",
+    "e2"
+   ],
+   "referencias": [
+    "2do parcial",
+    "Recuperatorios 1er parcial"
+   ],
+   "misma_clase_que": 52
+  },
+  {
+   "n": 52,
+   "fecha": "31-10-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 24,
+   "titulo": "Comunicaciones Clase del 31-10-2024",
+   "link": "https://www.youtube.com/watch?v=5yC9VRfz_K4",
+   "tipo": "teoria",
+   "resumen": "Repaso de DSB-SC, AM y detector de envolvente, y desarrollo del receptor de AM: espectro radioeléctrico, filtros resonantes RLC y selectividad (Q), y principio del receptor superheterodino con frecuencia intermedia.",
+   "detalle": [
+    "Mapa del espectro: AM, onda corta, TV, FM, banda aeronáutica, celulares, WiFi, satélites; bandas LF a EHF",
+    "Resonantes serie/paralelo: f0 = 1/(2π√LC), cortes a −3 dB, dualidad",
+    "Selectividad Q = f0/B; f0 = √(fci·fcs); Q≥10 da simetría aritmética",
+    "Filtro sintonizable de RF tiene bajo Q; el filtro fijo de FI permite alto Q y ganancia",
+    "Superheterodino: oscilador local fOL = fc + FI (465 kHz en AM), mezclador y FI fija; multiplicador de Q en etapas"
+   ],
+   "temas": [
+    "t6",
+    "t15",
+    "t46",
+    "t45",
+    "t42"
+   ],
+   "ejercicios": [
+    "e34",
+    "e35",
+    "e2"
+   ],
+   "referencias": [
+    "2do parcial",
+    "Recuperatorios 1er parcial"
+   ],
+   "misma_clase_que": 51
+  },
+  {
+   "n": 53,
+   "fecha": "06-11-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 1,
+   "titulo": "Comunicacion 06-11-2025",
+   "link": "https://www.youtube.com/watch?v=S6Y11xRlwR0",
+   "tipo": "mixta",
+   "resumen": "Ejercicio de FM con un tono resuelto en Excel que sirve para fijar teoría: espectro por funciones de Bessel, reparto de potencia, bandas laterales significativas y regla de Carson, con las normas de FM broadcasting.",
+   "detalle": [
+    "β = Δfmax/fm; sin límite superior (a diferencia de m en AM)",
+    "Componentes Ac·Jn(β) en fc ± n·fm; potencia total Ac²/2R constante",
+    "La componente en fc no es la portadora: varía con β (nula si J0(β)=0)",
+    "Bandas significativas ≈ β+1 (entero) para el 99 % de la potencia; siempre en número par",
+    "Carson: B = 2(β+1)fm = 2Δf + 2fm",
+    "FM broadcasting: 88–108 MHz, Δf 75 kHz, W 30 Hz–15 kHz, canal de 200 kHz"
+   ],
+   "temas": [
+    "t48",
+    "t49",
+    "t50"
+   ],
+   "ejercicios": [
+    "e36",
+    "e37"
+   ],
+   "referencias": [
+    "Ejercicio tipo parcial/final de FM",
+    "Problema de la guía sobre FM broadcasting",
+    "Revisión del parcial"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 54,
+   "fecha": "07-11-2024",
+   "anio": 2024,
+   "playlist": "B",
+   "pos": 25,
+   "titulo": "Comunicaciones Clase del 7-11-2024 (Repaso 2do Parcial)",
+   "link": "https://www.youtube.com/watch?v=yay2lH9MVh4",
+   "tipo": "repaso",
+   "resumen": "Clase de repaso para el segundo parcial con ejercicios de receptor superheterodino, TDM y frecuencia imagen en micrófonos inalámbricos; la teoría aparece en las respuestas a consultas.",
+   "detalle": [
+    "Frecuencia imagen a ±2·FI de la sintonía; la atenúa solo el amplificador de RF",
+    "Para que la imagen quede fuera de la banda: FI > rango/2 (p. ej. FI 10,7 MHz en FM 88–108)",
+    "Potencia AM: Pc(1+m²/2); con varios tonos se suman los mi²/2; índice μ(t) mantenido ≤1 con procesador de audio",
+    "Detector de envolvente sin oscilador local (receptor a galena); DSB-SC requiere reinyectar la portadora"
+   ],
+   "temas": [
+    "t46",
+    "t42",
+    "t44",
+    "t40"
+   ],
+   "ejercicios": [
+    "e35",
+    "e2",
+    "e1",
+    "e11",
+    "e15",
+    "e34",
+    "e24",
+    "e33",
+    "e28",
+    "e31",
+    "e29"
+   ],
+   "referencias": [
+    "Repaso 2do parcial",
+    "Ejercicios de la guía de receptores (2, 3 y 4)",
+    "Ejercicio del 1er parcial (error de cuantificación)",
+    "Recuperatorio 1er parcial"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 55,
+   "fecha": "12-11-2025",
+   "anio": 2025,
+   "playlist": "B",
+   "pos": 27,
+   "titulo": "Teorema de Muestreo Demostración Matemática",
+   "link": "https://www.youtube.com/watch?v=UgNKtt_6cAc",
+   "tipo": "teoria",
+   "resumen": "Muestreo de señales analógicas: muestreo ideal con tren de impulsos, espectro replicado y reconstrucción exacta con filtro pasabajos ideal mediante suma de sinc; luego muestreo natural, flat-top con sample & hold y el origen de 44,1 kHz.",
+   "detalle": [
+    "xs(t) = x(t)·δTs(t); el tren de impulsos tiene espectro de impulsos de área ωs (desarrollo de Fourier)",
+    "Xs(ω) = (ωs/2π)·Σ X(ω−nωs): alias espectrales; ωs ≥ 2ωmax evita aliasing",
+    "Reconstrucción: x(t) = Σ x(nTs)·sinc; las sinc forman un conjunto ortonormal, no hay interpolación",
+    "Sobremuestrear no mejora la reconstrucción, solo relaja el filtro; la pérdida está en la cuantificación",
+    "Sample & hold con llaves FET: flat-top, efecto de apertura corregible por ecualización",
+    "44,1 kHz surge de grabar audio digital en video (294 líneas × 50 campos × 3)"
+   ],
+   "temas": [
+    "t30",
+    "t31",
+    "t10",
+    "t11",
+    "t13",
+    "t32",
+    "t36"
+   ],
+   "ejercicios": [
+    "e7",
+    "e23"
+   ],
+   "referencias": [
+    "TP1 ejercicio 4 (tren de impulsos)",
+    "Recuperatorio 1er parcial",
+    "2do parcial y recuperatorios"
+   ],
+   "misma_clase_que": null
+  },
+  {
+   "n": 56,
+   "fecha": "13-11-2025",
+   "anio": 2025,
+   "playlist": "A",
+   "pos": 23,
+   "titulo": "Comunicacion Clase repaso 2do parcial13-11-2025",
+   "link": "https://www.youtube.com/watch?v=THxdoOtr96g",
+   "tipo": "practica",
+   "resumen": "Clase de ejercicios de repaso para el parcial: multiplexor TDM con tramas y agregador, AM a partir de osciloscopio y analizador de espectro, interferencia entre receptores superheterodinos y FM con funciones de Bessel, también por ingeniería inversa desde el espectro.",
+   "detalle": [
+    "Para que el oscilador local no caiga dentro de la banda de sintonía de otro receptor: FI > ancho del rango de sintonía",
+    "Medición de kf: subir Am hasta la primera anulación de J0 (β ≈ 2,4)",
+    "En AM la portadora no cambia con m; en FM todas las componentes varían con β, sin corrimiento de frecuencia"
+   ],
+   "temas": [
+    "t40",
+    "t42",
+    "t46",
+    "t48"
+   ],
+   "ejercicios": [
+    "e31",
+    "e28",
+    "e19",
+    "e33",
+    "e35",
+    "e36",
+    "e37"
+   ],
+   "referencias": [
+    "Repaso 2do parcial",
+    "Ejercicios de parciales anteriores",
+    "Tabla de Bessel para el parcial"
+   ],
+   "misma_clase_que": null
+  }
+ ],
+ "linea_de_tiempo": [
+  {
+   "bloque": "b1",
+   "temas": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6"
+   ],
+   "clases_recomendadas": [
+    {
+     "n": 1,
+     "cursada": "2024 A",
+     "principal": false,
+     "motivo": "Cubre: Atenuación y decibeles, Atenuación de espacio libre, Antenas (directividad y área efectiva), Propagación y línea de vista, Líneas de transmisión."
+    },
+    {
+     "n": 2,
+     "cursada": "2024 B",
+     "principal": true,
+     "motivo": "Cubre: Atenuación y decibeles, Atenuación de espacio libre, Antenas (directividad y área efectiva), Propagación y línea de vista. Otra grabación de la clase n.º 1."
+    },
+    {
+     "n": 3,
+     "cursada": "2024 B",
+     "principal": true,
+     "motivo": "Cubre: Atenuación y decibeles, Antenas (directividad y área efectiva), Propagación y línea de vista, Espectro electromagnético, Líneas de transmisión. Otra grabación de la clase n.º 1."
+    }
+   ],
+   "otras_clases": [
+    12,
+    13,
+    16,
+    45,
+    49,
+    51,
+    52
+   ],
+   "hito": null
+  },
+  {
+   "bloque": "b2",
+   "temas": [
+    "t7",
+    "t8",
+    "t9",
+    "t10",
+    "t11",
+    "t12",
+    "t13",
+    "t14",
+    "t15"
+   ],
+   "clases_recomendadas": [
+    {
+     "n": 4,
+     "cursada": "2025",
+     "principal": false,
+     "motivo": "Cubre: Señales y espectro, Clasificación de señales, Energía y potencia de señales."
+    },
+    {
+     "n": 11,
+     "cursada": "2026",
+     "principal": true,
+     "motivo": "Cubre: Serie de Fourier, Transformada de Fourier, Señales y espectro, Ancho de banda, Teorema de Parseval / Rayleigh, Convolución."
+    }
+   ],
+   "otras_clases": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    31,
+    32,
+    35,
+    42,
+    51,
+    52,
+    55
+   ],
+   "hito": null
+  },
+  {
+   "bloque": "b3",
+   "temas": [
+    "t16",
+    "t17",
+    "t18",
+    "t19",
+    "t20",
+    "t21",
+    "t22",
+    "t23",
+    "t24"
+   ],
+   "clases_recomendadas": [
+    {
+     "n": 5,
+     "cursada": "2024 A",
+     "principal": true,
+     "motivo": "Cubre: Ruido (tipos y fuentes), Compatibilidad electromagnética, Ruido térmico, Ruido blanco, Relación señal a ruido (SNR)."
+    },
+    {
+     "n": 8,
+     "cursada": "2024 A",
+     "principal": true,
+     "motivo": "Cubre: Ruido térmico, Ruido blanco, Ruido en cuadripolos, Ancho de banda equivalente de ruido, Figura de ruido (fórmula de Friis), Relación señal a ruido (SNR)."
+    },
+    {
+     "n": 12,
+     "cursada": "2024 A",
+     "principal": true,
+     "motivo": "Cubre: Figura de ruido (fórmula de Friis), Temperatura equivalente de ruido, Ruido térmico, Relación señal a ruido (SNR)."
+    },
+    {
+     "n": 6,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Cubre: Ruido (tipos y fuentes), Compatibilidad electromagnética, Ruido térmico, Relación señal a ruido (SNR). Otra grabación de la clase n.º 5."
+    },
+    {
+     "n": 9,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Cubre: Ruido térmico, Ruido blanco, Ruido en cuadripolos, Ancho de banda equivalente de ruido. Otra grabación de la clase n.º 8."
+    },
+    {
+     "n": 13,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Cubre: Figura de ruido (fórmula de Friis), Temperatura equivalente de ruido, Ruido térmico. Otra grabación de la clase n.º 12."
+    },
+    {
+     "n": 16,
+     "cursada": "2025",
+     "principal": false,
+     "motivo": "Cubre: Figura de ruido (fórmula de Friis), Temperatura equivalente de ruido, Relación señal a ruido (SNR)."
+    }
+   ],
+   "otras_clases": [
+    1,
+    2,
+    7,
+    10,
+    14,
+    15,
+    30
+   ],
+   "hito": null
+  },
+  {
+   "bloque": "b4",
+   "temas": [
+    "t25",
+    "t26",
+    "t27",
+    "t28",
+    "t29"
+   ],
+   "clases_recomendadas": [
+    {
+     "n": 17,
+     "cursada": "2024 A",
+     "principal": false,
+     "motivo": "Cubre: Información y entropía, Tasa de información, Capacidad de canal (Shannon), Velocidad de señalización (baudios), Señales M-arias."
+    },
+    {
+     "n": 18,
+     "cursada": "2024 B",
+     "principal": true,
+     "motivo": "Cubre: Información y entropía, Tasa de información, Capacidad de canal (Shannon), Velocidad de señalización (baudios). Otra grabación de la clase n.º 17."
+    },
+    {
+     "n": 19,
+     "cursada": "2024 B",
+     "principal": true,
+     "motivo": "Cubre: Velocidad de señalización (baudios), Tasa de información, Señales M-arias. Otra grabación de la clase n.º 17."
+    }
+   ],
+   "otras_clases": [
+    32,
+    35
+   ],
+   "hito": null
+  },
+  {
+   "bloque": "b5",
+   "temas": [
+    "t30",
+    "t31",
+    "t32",
+    "t33",
+    "t34",
+    "t35",
+    "t36",
+    "t37",
+    "t38"
+   ],
+   "clases_recomendadas": [
+    {
+     "n": 22,
+     "cursada": "2024 A",
+     "principal": true,
+     "motivo": "Cubre: PCM, Teorema de muestreo (Nyquist), Aliasing."
+    },
+    {
+     "n": 28,
+     "cursada": "2024 A",
+     "principal": true,
+     "motivo": "Cubre: Teorema de muestreo (Nyquist), Muestreo natural y flat-top, Cuantificación uniforme, Ruido de cuantificación, PCM."
+    },
+    {
+     "n": 33,
+     "cursada": "2024 A",
+     "principal": true,
+     "motivo": "Cubre: Cuantificación uniforme, Ruido de cuantificación, Cuantificación no uniforme (companding, leyes A y μ), PCM."
+    },
+    {
+     "n": 39,
+     "cursada": "2024 A",
+     "principal": true,
+     "motivo": "Cubre: Codificación de línea, PCM, Sincronismo."
+    },
+    {
+     "n": 23,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Cubre: PCM, Teorema de muestreo (Nyquist), Aliasing. Otra grabación de la clase n.º 22."
+    },
+    {
+     "n": 29,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Cubre: Muestreo natural y flat-top, Teorema de muestreo (Nyquist), Cuantificación uniforme, PCM. Otra grabación de la clase n.º 28."
+    },
+    {
+     "n": 30,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Cubre: Cuantificación uniforme, Ruido de cuantificación. Otra grabación de la clase n.º 28."
+    },
+    {
+     "n": 35,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Cubre: Cuantificación no uniforme (companding, leyes A y μ), PCM, Codificación de línea. Otra grabación de la clase n.º 32."
+    },
+    {
+     "n": 40,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Cubre: Codificación de línea, Sincronismo, PCM. Otra grabación de la clase n.º 39."
+    },
+    {
+     "n": 31,
+     "cursada": "2025",
+     "principal": false,
+     "motivo": "Cubre: Teorema de muestreo (Nyquist), Cuantificación uniforme, Cuantificación no uniforme (companding, leyes A y μ), Ruido de cuantificación."
+    },
+    {
+     "n": 55,
+     "cursada": "2025",
+     "principal": false,
+     "motivo": "Cubre: Teorema de muestreo (Nyquist), Aliasing, Muestreo natural y flat-top, PCM."
+    },
+    {
+     "n": 36,
+     "cursada": "2026",
+     "principal": false,
+     "motivo": "Cubre: Cuantificación uniforme, Ruido de cuantificación, PCM."
+    },
+    {
+     "n": 42,
+     "cursada": "2026",
+     "principal": false,
+     "motivo": "Cubre: Cuantificación uniforme, Cuantificación no uniforme (companding, leyes A y μ), PCM."
+    }
+   ],
+   "otras_clases": [
+    21,
+    24,
+    25,
+    26,
+    27,
+    32,
+    34,
+    41,
+    50
+   ],
+   "hito": null
+  },
+  {
+   "bloque": null,
+   "hito": "Repaso y 1er parcial",
+   "temas": [],
+   "clases_recomendadas": [
+    {
+     "n": 47,
+     "cursada": "2024 A",
+     "principal": true,
+     "motivo": "Repaso con ejercicios (17 tipos de ejercicio)."
+    },
+    {
+     "n": 48,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Repaso con ejercicios (17 tipos de ejercicio). Otra grabación de la clase n.º 47."
+    },
+    {
+     "n": 37,
+     "cursada": "2025",
+     "principal": false,
+     "motivo": "Repaso con ejercicios (11 tipos de ejercicio)."
+    },
+    {
+     "n": 46,
+     "cursada": "2025",
+     "principal": false,
+     "motivo": "Repaso con ejercicios (15 tipos de ejercicio)."
+    },
+    {
+     "n": 43,
+     "cursada": "2026",
+     "principal": false,
+     "motivo": "Repaso con ejercicios (9 tipos de ejercicio)."
+    }
+   ],
+   "otras_clases": []
+  },
+  {
+   "bloque": "b6",
+   "temas": [
+    "t39",
+    "t40",
+    "t41"
+   ],
+   "clases_recomendadas": [
+    {
+     "n": 44,
+     "cursada": "2025",
+     "principal": true,
+     "motivo": "Cubre: Multiplexación por división de tiempo (TDM), PAM."
+    }
+   ],
+   "otras_clases": [
+    42,
+    45,
+    54,
+    56
+   ],
+   "hito": null
+  },
+  {
+   "bloque": "b7",
+   "temas": [
+    "t42",
+    "t43",
+    "t44",
+    "t45"
+   ],
+   "clases_recomendadas": [
+    {
+     "n": 50,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Cubre: Doble banda lateral sin portadora (DSB), Demodulación / detección, Modulación lineal y AM, Índice de modulación (AM)."
+    },
+    {
+     "n": 45,
+     "cursada": "2025",
+     "principal": true,
+     "motivo": "Cubre: Modulación lineal y AM, Doble banda lateral sin portadora (DSB), Demodulación / detección."
+    },
+    {
+     "n": 49,
+     "cursada": "2025",
+     "principal": true,
+     "motivo": "Cubre: Modulación lineal y AM, Doble banda lateral sin portadora (DSB), Índice de modulación (AM), Demodulación / detección."
+    }
+   ],
+   "otras_clases": [
+    38,
+    44,
+    51,
+    52,
+    54,
+    56
+   ],
+   "hito": null
+  },
+  {
+   "bloque": "b8",
+   "temas": [
+    "t46",
+    "t47"
+   ],
+   "clases_recomendadas": [
+    {
+     "n": 51,
+     "cursada": "2024 A",
+     "principal": true,
+     "motivo": "Cubre: Receptor superheterodino."
+    },
+    {
+     "n": 52,
+     "cursada": "2024 B",
+     "principal": false,
+     "motivo": "Cubre: Receptor superheterodino. Otra grabación de la clase n.º 51."
+    }
+   ],
+   "otras_clases": [
+    50,
+    54,
+    56
+   ],
+   "hito": null
+  },
+  {
+   "bloque": "b9",
+   "temas": [
+    "t48",
+    "t49",
+    "t50"
+   ],
+   "clases_recomendadas": [
+    {
+     "n": 38,
+     "cursada": "2025",
+     "principal": true,
+     "motivo": "Cubre: Modulación angular (FM/PM), Índice de modulación (FM)."
+    },
+    {
+     "n": 53,
+     "cursada": "2025",
+     "principal": true,
+     "motivo": "Cubre: Modulación angular (FM/PM), Índice de modulación (FM), Ancho de banda de FM (Carson)."
+    }
+   ],
+   "otras_clases": [
+    56
+   ],
+   "hito": null
+  },
+  {
+   "bloque": null,
+   "hito": "Repaso y 2do parcial",
+   "temas": [],
+   "clases_recomendadas": [
+    {
+     "n": 54,
+     "cursada": "2024 B",
+     "principal": true,
+     "motivo": "Repaso con ejercicios (11 tipos de ejercicio)."
+    },
+    {
+     "n": 56,
+     "cursada": "2025",
+     "principal": false,
+     "motivo": "Repaso con ejercicios (7 tipos de ejercicio)."
+    }
+   ],
+   "otras_clases": []
+  }
+ ]
+}

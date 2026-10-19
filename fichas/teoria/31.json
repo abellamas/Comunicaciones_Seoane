@@ -1,0 +1,11 @@
+{"n": 31, "tipo": "teoria",
+ "resumen": "Demostración matemática de la reconstrucción por suma de sinc ortogonales ponderadas por las muestras, y cuantificación no uniforme con companding (leyes A y μ) para mantener constante la SNR de cuantificación.",
+ "temas": ["Teorema de muestreo (Nyquist)", "Transformada de Fourier", "Filtros", "Cuantificación", "Cuantificación no uniforme (companding)", "Ruido de cuantificación"],
+ "detalle": [
+  "Xs(ω) = Σ x(nTs)·e^(−jωnTs); aplicando el pasabajos ideal y antitransformando: x(t) = Σ x(nTs)·sinc[ωmáx(t − nTs)]",
+  "Las sinc desplazadas Ts forman una familia ortogonal: la reconstrucción es exacta, no una interpolación aproximada (análogo a la serie de Fourier)",
+  "Con cuantificación uniforme Nq = ΔQ²/12 es constante y la SNR cae para señales débiles",
+  "Companding: compresión logarítmica + cuantificador uniforme + expansión inversa; leyes μ (EE.UU./Japón) y A (resto del mundo)",
+  "Ley A por 13 segmentos: palabra de 8 bits (signo, 3 bits de segmento, 4 de nivel) que rinde como ~10–12 bits en niveles bajos",
+  "Útil para la voz, cuya amplitud es baja la mayor parte del tiempo"
+ ]}

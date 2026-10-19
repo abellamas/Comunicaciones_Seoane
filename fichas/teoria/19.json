@@ -1,0 +1,9 @@
+{"n": 19, "tipo": "teoria",
+ "resumen": "Parte 2 de la clase del 12-09-2024 (misma clase que la n.º 17): relación entre baudios y bits por segundo con pulsos M-arios y símbolos de fase.",
+ "temas": ["Velocidad de señalización (baudios)", "Tasa de información", "Señales M-arias"],
+ "detalle": [
+  "Un pulso M-ario lleva log2 M bits (cuaternario 2, octal 3)",
+  "R = s·log2 M; baudio y bit/s coinciden sólo con pulsos binarios",
+  "Sistemas de numeración posicionales (decimal, binario, ternario)",
+  "Un símbolo puede ser una amplitud o una fase: 4 fases codifican 2 bits"
+ ]}

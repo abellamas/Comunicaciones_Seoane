@@ -1,0 +1,11 @@
+{"n": 4, "tipo": "teoria",
+ "resumen": "Inicio de la unidad de Señales: clasificación de señales y cálculo de energía y potencia normalizada, con la potencia de una senoide como ejemplo.",
+ "temas": ["Señales y espectro", "Clasificación de señales", "Energía y potencia de señales"],
+ "detalle": [
+  "De una señal interesan sobre todo su potencia y su ancho de banda; dominio del tiempo y de la frecuencia se relacionan de forma biunívoca",
+  "Tiempo continuo (analógica), tiempo discreto (muestreada) y digital (tiempo y amplitud discretos); la binaria es un caso particular de la digital",
+  "Determinísticas vs. aleatorias; periódicas vs. aperiódicas (en la práctica ninguna señal real es estrictamente periódica ni determinística)",
+  "Señal de energía: energía finita y no nula; señal de potencia: energía infinita y potencia finita",
+  "Potencia normalizada (R = 1 Ω); senoide de amplitud A: P = A²/2; el valor eficaz no se usa en la materia",
+  "Frecuencia angular ω = 2πf = 2π/T"
+ ]}

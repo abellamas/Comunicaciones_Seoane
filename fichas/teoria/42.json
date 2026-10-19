@@ -1,0 +1,11 @@
+{"n": 42, "tipo": "mixta",
+ "resumen": "Ejercicios de cuantificación de la guía 3 con desarrollo teórico de la cuantificación no uniforme para voz, el ancho de banda de un flujo PCM y la multiplexación por división de tiempo con llaves conmutadoras.",
+ "temas": ["Cuantificación", "Cuantificación no uniforme (companding)", "PCM", "Ancho de banda", "Multiplexación (TDM)"],
+ "detalle": [
+  "La voz es una señal de tipo ráfaga: con cuantificación no uniforme 8 bits rinden ~70 dB frente a 48 dB uniformes",
+  "Telefonía: fs = 8 kHz × 8 bits = 64 kbit/s, luego reducidos por compresión con pérdidas; la coma flotante es una forma de cuantificación no uniforme",
+  "Al digitalizar, la señal pasa a ser un flujo de números (señal numérica)",
+  "Ancho de banda de un flujo binario: R/2 en el caso ideal (peor caso: alternancia de unos y ceros)",
+  "TDM: una llave toma muestras de cada canal en sincronismo con la llave receptora; debe girar al ritmo del canal más rápido para no perder muestras",
+  "Agrupar canales en llaves jerárquicas iguala las tasas y reduce el ancho de banda necesario"
+ ]}

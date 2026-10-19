@@ -1,0 +1,11 @@
+{"n": 33, "tipo": "teoria",
+ "resumen": "Repaso de la SNR de cuantificación (6 dB por bit), la señal digitalizada como tabla de números, motivación y funcionamiento de la cuantificación no uniforme (leyes A y μ) y codificación PCM de las muestras.",
+ "temas": ["Cuantificación", "Ruido de cuantificación", "Cuantificación no uniforme (companding)", "PCM"],
+ "detalle": [
+  "S/Nq = 4,77 + 6·n dB; cada muestra cuantificada es un número binario de n dígitos",
+  "Digitalizar es reemplazar la forma de onda por números; la cuantificación es irreversible pero el error puede hacerse imperceptible",
+  "Con Nq fijo la SNR instantánea cae con el nivel de la señal; la no uniforme busca SNR constante (escalones chicos para señales bajas)",
+  "Compresión logarítmica (leyes μ y A) aproximada por 13 segmentos con pendientes que se duplican",
+  "Palabra de 8 bits: polaridad + segmento (3) + nivel (4); equivale a 60 dB en niveles bajos y 24 dB en altos",
+  "Codificación de niveles (natural o signo-magnitud); MSB y LSB definen el orden de lectura"
+ ]}

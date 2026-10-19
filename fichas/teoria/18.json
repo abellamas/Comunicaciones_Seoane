@@ -1,0 +1,9 @@
+{"n": 18, "tipo": "mixta",
+ "resumen": "Parte 1 de la clase del 12-09-2024 (misma clase que la n.º 17): ejercicios de tasa de información y capacidad de canal, y definición de la velocidad de señalización en baudios a partir del telex.",
+ "temas": ["Información y entropía", "Tasa de información", "Capacidad de canal (Shannon)", "Velocidad de señalización (baudios)"],
+ "detalle": [
+  "Información por píxel = log2(niveles); tasa de video = bits/píxel × píxeles × cuadros/s",
+  "Capacidad de Shannon C = B·log2(1 + S/N); si R ≤ C existe una codificación sin errores",
+  "Baudio: eventos de señalización por segundo, s = 1/τmín",
+  "El sincronismo (pulsos de arranque/parada) consume tiempo sin información de la fuente: R < s"
+ ]}

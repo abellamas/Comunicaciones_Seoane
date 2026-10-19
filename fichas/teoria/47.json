@@ -1,0 +1,8 @@
+{"n": 47, "tipo": "repaso",
+ "resumen": "Clase de consultas de repaso para el primer parcial: dudas de muestreo flat-top, espectros por convolución de pulsos cosenoidales, ancho de banda de PCM, ruido y codificación de fuentes discretas.",
+ "temas": [],
+ "detalle": [
+  "Ancho de banda de una señal binaria ≈ R/2 en el caso ideal (dos bits por ciclo); en la práctica ~20 % más según el filtro",
+  "La temperatura equivalente de ruido es un concepto ficticio, no termodinámico",
+  "La información se calcula con la probabilidad de los símbolos de la fuente, no de los pulsos que los codifican"
+ ]}

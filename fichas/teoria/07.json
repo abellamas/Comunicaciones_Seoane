@@ -1,0 +1,9 @@
+{"n": 7, "tipo": "teoria",
+ "resumen": "Parte 2 de la clase del 29-08-2024 (misma clase que la n.º 5): el ruido térmico como ruido blanco y la potencia disponible de ruido kTB.",
+ "temas": ["Ruido térmico", "Ruido blanco"],
+ "detalle": [
+  "Para hf/kT ≤ 0,1 la densidad espectral es ≈ kT: plana hasta ~600 GHz a 290 K",
+  "kT a 290 K ≈ 4·10⁻²¹ W/Hz ≈ −174 dBm/Hz; al bajar la temperatura baja el nivel y el límite de frecuencia",
+  "Única propiedad predecible: el valor cuadrático medio, 4kTRB (modelos Thévenin y Norton)",
+  "Potencia disponible (máxima transferencia, carga adaptada): N = kTB, no depende de R"
+ ]}

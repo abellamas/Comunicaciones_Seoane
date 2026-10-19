@@ -1,0 +1,10 @@
+{"n": 40, "tipo": "teoria",
+ "resumen": "Parte 1 de la clase del 03-10-2024 (misma clase que la n.º 39): pulsos reales, ancho de banda de la señal binaria, clasificación de códigos de línea y necesidad de sincronismo.",
+ "temas": ["Codificación de línea", "Sincronismo", "PCM"],
+ "detalle": [
+  "Ancho del pulso medido al 50 %; ancho de banda de la señal binaria ≈ R/2",
+  "Códigos unipolares/bipolares, RZ/NRZ, por nivel o por símbolo (marca/espacio)",
+  "Sincronismo: el receptor debe saber cuándo evaluar cada pulso (osciloscopio, lámpara estroboscópica)",
+  "Requisitos del código: valor medio nulo, fuente de sincronismo e insensibilidad a la polaridad",
+  "Al invertir los cables, los códigos por nivel invierten la secuencia binaria"
+ ]}

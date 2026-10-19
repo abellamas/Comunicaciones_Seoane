@@ -1,0 +1,11 @@
+{"n": 8, "tipo": "teoria",
+ "resumen": "Ruido en cuadripolos: transferencia de la densidad espectral, ancho de banda equivalente de ruido y definición de la figura (cifra) de ruido, incluida la fórmula de Friis para cascadas.",
+ "temas": ["Ruido térmico", "Ruido blanco", "Cuadripolos", "Ancho de banda equivalente de ruido", "Figura de ruido", "Relación señal a ruido (SNR)"],
+ "detalle": [
+  "Resistor real = resistor ideal + generador de ruido (modelos Thévenin/Norton); con adaptación se transfiere kTB",
+  "Densidad espectral de salida = densidad de entrada × |H(f)|²; con ruido blanco a la entrada la forma la da el filtro",
+  "Densidad espectral y autocorrelación son par de Fourier; el ruido térmico se trata como proceso ergódico",
+  "Ancho de banda equivalente de ruido: rectángulo de igual área; para un RC vale (π/2)·B(−3 dB) ≈ 1,57·B",
+  "Figura de ruido F = SNR entrada / SNR salida ≥ 1; los pasivos atenúan la señal pero no el ruido; los activos agregan ruido propio",
+  "Cascada (Friis): F = F1 + (F2−1)/G1 + (F3−1)/(G1G2)…; la primera etapa debe ser de bajo ruido y alta ganancia"
+ ]}

@@ -1,0 +1,9 @@
+{"n": 24, "tipo": "teoria",
+ "resumen": "Parte 2 de la clase del 19-09-2024 (misma clase que la n.º 21): formulación matemática del muestreo ideal, espectro de la señal muestreada y reconstrucción con filtro ideal.",
+ "temas": ["Teorema de muestreo (Nyquist)", "Aliasing", "Transformada de Fourier", "Filtros"],
+ "detalle": [
+  "xs(t) = x(t)·Σδ(t − nTs): el producto con el peine retiene x(nTs)",
+  "Espectro muestreado: (ωs/2π)·Σ X(ω − nωs), réplicas en múltiplos de ωs",
+  "Un filtro pasabajos ideal con corte en ωs/2 recupera el alias principal",
+  "Por transformada directa: Xs(ω) = Σ x(nTs)·e^(−jωnTs)"
+ ]}

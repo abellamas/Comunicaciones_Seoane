@@ -1,0 +1,11 @@
+{"n": 9, "tipo": "teoria",
+ "resumen": "Parte 1 de la clase del 02-09-2024 (misma clase que la n.º 8): modelo de ruido de resistores, cuadripolos, densidad espectral a través de un cuadripolo y ancho de banda equivalente de ruido.",
+ "temas": ["Ruido térmico", "Ruido blanco", "Cuadripolos", "Ancho de banda equivalente de ruido"],
+ "detalle": [
+  "Resistor real = resistor ideal + generador de ruido; con adaptación (antena–receptor) se transfiere la potencia máxima kTB",
+  "Cuadripolos: parámetros de admitancia e impedancia; transferencia = respuesta/excitación",
+  "Densidad espectral de salida = densidad de entrada × |H(f)|²; autocorrelación y densidad espectral son par de Fourier",
+  "Ruido térmico como proceso ergódico: autocorrelación tipo delta",
+  "Ancho de banda equivalente de ruido: para un RC es π/2 veces el ancho de banda de −3 dB",
+  "Un dispositivo activo amplifica el ruido de entrada y agrega su propio ruido"
+ ]}

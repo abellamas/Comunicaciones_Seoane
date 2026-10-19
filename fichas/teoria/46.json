@@ -1,0 +1,8 @@
+{"n": 46, "tipo": "practica",
+ "resumen": "Resolución completa del primer parcial: espectro por convolución, potencia, ruido en cascada con temperaturas equivalentes, tasa de información de video, capacidad de canal y digitalización multicanal.",
+ "temas": [],
+ "detalle": [
+  "La potencia de una senoide es A²/2 sobre la resistencia (se usa valor pico, no eficaz)",
+  "La antena es la fuente de señal y ruido: no forma parte de la cascada de Friis",
+  "Aumentar el ancho de banda eleva el ruido kTB y baja la SNR; la figura de ruido de la cadena no cambia"
+ ]}

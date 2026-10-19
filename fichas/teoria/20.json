@@ -1,0 +1,9 @@
+{"n": 20, "tipo": "practica",
+ "resumen": "Clase de ejercicios: cierre de un problema de ruido en cascada y resolución de espectros por convolución gráfica (impulso, coseno pulsado, trenes de pulsos).",
+ "temas": ["Transformada de Fourier", "Convolución", "Señales y espectro"],
+ "detalle": [
+  "El impulso (delta de Dirac) tiene espectro plano en todas las frecuencias",
+  "Coseno pulsado (señal de radar): producto de portadora por tren de pulsos → el espectro sinc discreto se traslada a ±f0",
+  "Convolucionar con un par de impulsos desplaza copias; en frecuencia equivale a multiplicar por un coseno",
+  "Retardo de grupo: derivada de la fase respecto de la frecuencia; distintas frecuencias atraviesan el canal con distinto retardo"
+ ]}

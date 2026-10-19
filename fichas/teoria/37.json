@@ -1,0 +1,8 @@
+{"n": 37, "tipo": "repaso",
+ "resumen": "Clase de repaso para el primer parcial resolviendo ejercicios de teoría de la información, ruido en cascada, espectros por convolución gráfica y digitalización, con pautas de evaluación.",
+ "temas": [],
+ "detalle": [
+  "Unidades del primer parcial: espectro, teoría de la información, ruido y digitalización",
+  "Se repasa que la fase (seno vs. coseno, desplazamientos) no altera el espectro de amplitud",
+  "Se insiste en razonar los problemas en lugar de aplicar fórmulas de memoria"
+ ]}

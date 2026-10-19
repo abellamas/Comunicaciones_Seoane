@@ -1,0 +1,332 @@
+<title>Mapa de Comunicaciones</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.9/standalone/umd/vis-network.min.js"></script>
+<style>
+/* Layout: herramienta de estudio. Barra superior con buscador y pestañas; debajo, mapa (grafo) con panel de detalle a la derecha, o la línea de tiempo, o la lista de clases. */
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --surface-2:#e9edf3; --line:#d3d9e3;
+  --ink:#18202d; --muted:#5a6476; --accent:#2b56c9; --accent-ink:#ffffff; --amber:#a8650a; --ok:#1f7a4d;
+  --b1:#2b56c9; --b2:#7a3fb8; --b3:#0f7f86; --b4:#b23a48; --b5:#b06a00; --b6:#3f7d1f; --b7:#c2410c; --b8:#5b5fc7; --b9:#8a6d1d; --b10:#4b5563;
+  --font-display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --font-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --r:8px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f131a; --surface:#171c25; --surface-2:#1f2633; --line:#2c3545;
+  --ink:#e5e9f0; --muted:#98a2b5; --accent:#7f9dff; --accent-ink:#0f131a; --amber:#e3a548; --ok:#5fc28f;
+  --b1:#7f9dff; --b2:#b98ae6; --b3:#4cc3c9; --b4:#ee7f8c; --b5:#e8a73e; --b6:#8ccf63; --b7:#f4844a; --b8:#a3a6f5; --b9:#d6b85a; --b10:#9ca3af;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f131a; --surface:#171c25; --surface-2:#1f2633; --line:#2c3545;
+  --ink:#e5e9f0; --muted:#98a2b5; --accent:#7f9dff; --accent-ink:#0f131a; --amber:#e3a548; --ok:#5fc28f;
+  --b1:#7f9dff; --b2:#b98ae6; --b3:#4cc3c9; --b4:#ee7f8c; --b5:#e8a73e; --b6:#8ccf63; --b7:#f4844a; --b8:#a3a6f5; --b9:#d6b85a; --b10:#9ca3af;
+  color-scheme:dark}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding-block:12px}
+.brand{display:flex;flex-direction:column;min-width:0}
+.brand h1{font-family:var(--font-display);font-stretch:85%;font-weight:800;font-size:1.45rem;letter-spacing:-.01em;margin:0;line-height:1.1;text-wrap:balance}
+.brand span{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.search{flex:1 1 280px;position:relative;min-width:0}
+.search input{width:100%;box-sizing:border-box;font:inherit;padding:9px 12px 9px 34px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg);color:var(--ink)}
+.search input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted)}
+.results{position:absolute;left:0;right:0;top:calc(100% + 6px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 10px 30px rgba(0,0,0,.18);max-height:min(60vh,420px);overflow:auto;z-index:20}
+.results button{display:flex;gap:10px;align-items:baseline;width:100%;text-align:left;font:inherit;background:none;border:0;padding:8px 12px;color:var(--ink);cursor:pointer;border-bottom:1px solid var(--line)}
+.results button:hover,.results button:focus-visible{background:var(--surface-2);outline:none}
+.kind{font-family:var(--font-mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);flex:0 0 74px}
+.tabs{display:flex;gap:4px;padding-bottom:0}
+.tabs button{font:inherit;font-weight:500;background:none;border:0;border-bottom:2px solid transparent;padding:8px 12px;color:var(--muted);cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs button:focus-visible{outline:2px solid var(--accent)}
+main{padding-block:16px 32px}
+.view[hidden]{display:none!important}
+/* Mapa */
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,380px);gap:16px;align-items:start}
+@media (max-width:900px){.mapgrid{grid-template-columns:minmax(0,1fr)}}
+.canvas-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;min-width:0}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line);font-size:.85rem}
+.toolbar label{display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+.toolbar .sep{width:1px;height:18px;background:var(--line)}
+#net{height:min(72vh,680px);min-height:420px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;padding:10px 12px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;min-width:0;position:sticky;top:calc(env(safe-area-inset-top,0px) + 132px);max-height:calc(100vh - 160px);overflow:auto}
+@media (max-width:900px){.panel{position:static;max-height:none}}
+.eyebrow{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.panel h2{font-family:var(--font-display);font-stretch:90%;font-weight:700;font-size:1.25rem;margin:4px 0 8px;line-height:1.2;text-wrap:balance}
+.panel h3{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:16px 0 6px}
+.panel p{margin:0 0 8px}
+.panel ul{margin:0;padding-left:18px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:.8rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:3px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip:hover,.chip:focus-visible{border-color:var(--accent);outline:none}
+.chip i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.chip.ex{border-style:dashed;color:var(--amber)}
+.clist{display:flex;flex-direction:column;gap:8px}
+.citem{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 10px;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.citem .date{font-family:var(--font-mono);font-size:.78rem;font-variant-numeric:tabular-nums;color:var(--muted);grid-row:span 2;padding-top:2px}
+.citem button{font:inherit;text-align:left;background:none;border:0;padding:0;color:var(--ink);font-weight:500;cursor:pointer}
+.citem button:hover{color:var(--accent)}
+.citem small{color:var(--muted)}
+a{color:var(--accent)}
+.watch{display:inline-flex;align-items:center;gap:6px;font-weight:600;text-decoration:none;background:var(--accent);color:var(--accent-ink);padding:6px 12px;border-radius:6px;margin:4px 0 8px}
+.watch:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.badge{font-family:var(--font-mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;padding:2px 7px;border-radius:4px;background:var(--surface-2);color:var(--muted)}
+.empty{color:var(--muted)}
+/* Línea de tiempo */
+.tl{max-width:920px;display:flex;flex-direction:column;gap:0}
+.tl-intro{max-width:68ch;color:var(--muted);margin:0 0 16px}
+.progress{display:flex;align-items:center;gap:12px;margin:0 0 20px;font-size:.88rem}
+.bar{flex:0 1 260px;height:8px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.bar span{display:block;height:100%;background:var(--ok)}
+.step{display:grid;grid-template-columns:48px minmax(0,1fr);gap:0 14px}
+.rail{display:flex;flex-direction:column;align-items:center}
+.dot{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:.95rem;color:var(--surface);flex:0 0 auto}
+.rail .ln{flex:1;width:2px;background:var(--line);margin:4px 0}
+.step.hito .dot{background:var(--surface);border:2px dashed var(--muted);color:var(--muted);font-size:.7rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-bottom:16px;min-width:0}
+.card h2{font-family:var(--font-display);font-stretch:88%;font-weight:700;font-size:1.15rem;margin:0 0 4px;text-wrap:balance}
+.card p{margin:0 0 10px;color:var(--muted)}
+.rec{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.recrow{display:grid;grid-template-columns:auto auto minmax(0,1fr);align-items:baseline;gap:4px 10px;padding:6px 0;border-top:1px solid var(--line)}
+.recrow input{margin:0;width:16px;height:16px;accent-color:var(--ok)}
+.recrow .date{font-family:var(--font-mono);font-size:.8rem;font-variant-numeric:tabular-nums;color:var(--muted)}
+.recrow .why{grid-column:3;font-size:.82rem;color:var(--muted)}
+.star{color:var(--amber);font-weight:600}
+details.more summary{cursor:pointer;color:var(--muted);font-size:.85rem;margin-top:8px}
+/* Clases */
+.filters{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin-bottom:12px;font-size:.88rem}
+.filters select{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)}
+.tablebox{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:.88rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--surface-2)}
+td.num{font-variant-numeric:tabular-nums;font-family:var(--font-mono);font-size:.8rem;white-space:nowrap}
+td button{font:inherit;background:none;border:0;padding:0;color:var(--ink);text-align:left;cursor:pointer;font-weight:500}
+td button:hover{color:var(--accent)}
+.note{font-size:.8rem;color:var(--muted);margin-top:14px;max-width:80ch}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header>
+  <div class="wrap top">
+    <div class="brand"><h1>Mapa de Comunicaciones</h1><span>UNTREF · Ing. de Sonido · 56 clases</span></div>
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Buscá cualquier cosa: tema, fórmula, ejercicio o una pregunta (ej. PCM, por qué Carson, ruido térmico)" autocomplete="off" aria-label="Buscar">
+      <div class="results" id="results" hidden></div>
+    </div>
+  </div>
+  <nav class="wrap tabs" role="tablist" aria-label="Vistas">
+    <button role="tab" id="tab-mapa" aria-selected="true" data-view="mapa">Mapa</button>
+    <button role="tab" id="tab-tl" aria-selected="false" data-view="tl">Línea de tiempo</button>
+    <button role="tab" id="tab-clases" aria-selected="false" data-view="clases">Clases</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="view" id="view-mapa">
+    <div class="mapgrid">
+      <div class="canvas-box">
+        <div class="toolbar">
+          <label><input type="checkbox" id="showClases" checked> Clases</label>
+          <label><input type="checkbox" id="showEj"> Tipos de ejercicio</label>
+          <span class="sep"></span>
+          <span>Cursada:</span>
+          <label><input type="checkbox" class="yr" value="2024" id="y24" checked> 2024</label>
+          <label><input type="checkbox" class="yr" value="2025" id="y25" checked> 2025</label>
+          <label><input type="checkbox" class="yr" value="2026" id="y26" checked> 2026</label>
+        </div>
+        <div id="net" role="img" aria-label="Grafo de temas y clases de la materia"></div>
+        <div class="legend" id="legend"></div>
+      </div>
+      <aside class="panel" id="panel" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section class="view" id="view-tl" hidden>
+    <p class="tl-intro">Recorrido sugerido para cursar la materia de forma asincrónica, en el orden en que se dicta. En cada etapa, la clase marcada con ★ es la recomendada; las otras son alternativas de otras cursadas. Tildá las clases que ya viste; el progreso se guarda en este navegador.</p>
+    <div class="progress"><div class="bar"><span id="pbar" style="width:0%"></span></div><span id="ptext"></span></div>
+    <div class="tl" id="tl"></div>
+  </section>
+
+  <section class="view" id="view-clases" hidden>
+    <div class="filters">
+      <label>Cursada <select id="fyear"><option value="">Todas</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option></select></label>
+      <label>Tipo <select id="ftipo"><option value="">Todos</option><option value="teoria">Teoría</option><option value="practica">Práctica</option><option value="mixta">Mixta</option><option value="repaso">Repaso</option></select></label>
+    </div>
+    <div class="tablebox"><table><thead><tr><th>N°</th><th>Fecha</th><th>Clase</th><th>Temas</th><th>Ejercicios</th><th>Video</th></tr></thead><tbody id="tbody"></tbody></table></div>
+    <p class="note">Fichas generadas a partir de las transcripciones automáticas de YouTube, que tienen errores de reconocimiento; pueden faltar detalles o haber imprecisiones. Fecha de clase según el título del video (corregida o tomada de la fecha de subida donde el título no la tenía).</p>
+  </section>
+</main>
+
+<script>
+const DATA = /*DATA*/null;
+const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const B=Object.fromEntries(DATA.bloques.map(b=>[b.id,b])), T=Object.fromEntries(DATA.temas.map(t=>[t.id,t])), E=Object.fromEntries(DATA.ejercicios.map(e=>[e.id,e])), C=Object.fromEntries(DATA.clases.map(c=>[c.n,c]));
+const blockIdx={}; [...DATA.bloques].sort((a,b)=>a.orden-b.orden).forEach((b,i)=>blockIdx[b.id]=i+1);
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const bcol=id=>css('--b'+Math.min(blockIdx[id]||10,10));
+const cohort=c=>String(c.anio);
+const tipoTxt={teoria:'Teoría',practica:'Práctica',mixta:'Teoría y práctica',repaso:'Repaso'};
+const clasesDeTema=id=>DATA.clases.filter(c=>c.temas.includes(id));
+const clasesDeEj=id=>DATA.clases.filter(c=>c.ejercicios.includes(id));
+let seen={}; try{seen=JSON.parse(localStorage.getItem('vistos')||'{}')}catch(e){}
+const saveSeen=()=>{try{localStorage.setItem('vistos',JSON.stringify(seen))}catch(e){}};
+
+/* ---------- Panel ---------- */
+function classItem(c){return `<div class="citem"><span class="date">${esc(c.fecha)}</span><button data-open="c:${c.n}">${esc(c.titulo)}</button><small>${cohort(c)} · ${tipoTxt[c.tipo]||esc(c.tipo)}</small></div>`}
+function showTema(id){const t=T[id],b=B[t.bloque];const cl=clasesDeTema(id);
+  const rel=DATA.relaciones.filter(r=>r.de===id||r.a===id);
+  const pre=rel.filter(r=>r.a===id).map(r=>T[r.de]).filter(Boolean), post=rel.filter(r=>r.de===id).map(r=>T[r.a]).filter(Boolean);
+  const ej=DATA.ejercicios.filter(e=>(e.temas||[]).includes(id));
+  $('#panel').innerHTML=`<div class="eyebrow">Tema · ${esc(b?b.nombre:'')}</div><h2>${esc(t.nombre)}</h2>
+  ${pre.length?`<h3>Viene de</h3><div class="chips">${pre.map(chipT).join('')}</div>`:''}
+  ${post.length?`<h3>Se usa en</h3><div class="chips">${post.map(chipT).join('')}</div>`:''}
+  ${ej.length?`<h3>Ejercicios relacionados</h3><div class="chips">${ej.map(chipE).join('')}</div>`:''}
+  <h3>Clases donde se trata (${cl.length})</h3><div class="clist">${cl.map(classItem).join('')||'<span class="empty">Ninguna</span>'}</div>`;}
+function showEj(id){const e=E[id],b=B[e.bloque];const cl=clasesDeEj(id);
+  $('#panel').innerHTML=`<div class="eyebrow">Tipo de ejercicio · ${esc(b?b.nombre:'')}</div><h2>${esc(e.nombre)}</h2>
+  ${(e.temas||[]).length?`<h3>Temas</h3><div class="chips">${e.temas.map(x=>T[x]).filter(Boolean).map(chipT).join('')}</div>`:''}
+  <h3>Clases donde se resolvió (${cl.length})</h3><div class="clist">${cl.map(classItem).join('')}</div>`;}
+function showClase(n){const c=C[n];
+  const same=c.misma_clase_que?C[c.misma_clase_que]:null;
+  $('#panel').innerHTML=`<div class="eyebrow">Clase N° ${c.n} · ${esc(c.fecha)} · ${cohort(c)}</div><h2>${esc(c.titulo)}</h2>
+  <a class="watch" href="${esc(c.link)}" target="_blank" rel="noopener">▶ Ver en YouTube</a>
+  <div><span class="badge">${tipoTxt[c.tipo]||esc(c.tipo)}</span></div>
+  ${c.resumen?`<p style="margin-top:10px">${esc(c.resumen)}</p>`:''}
+  ${(c.detalle||[]).length?`<ul>${c.detalle.map(d=>`<li>${esc(d)}</li>`).join('')}</ul>`:''}
+  ${c.temas.length?`<h3>Temas</h3><div class="chips">${c.temas.map(x=>T[x]).filter(Boolean).map(chipT).join('')}</div>`:''}
+  ${c.ejercicios.length?`<h3>Ejercicios</h3><div class="chips">${c.ejercicios.map(x=>E[x]).filter(Boolean).map(chipE).join('')}</div>`:''}
+  ${(c.referencias||[]).length?`<h3>Referencias</h3><p>${c.referencias.map(esc).join(' · ')}</p>`:''}
+  ${same?`<h3>Probablemente es la misma clase (video duplicado)</h3><div class="clist">${classItem(same)}</div>`:''}`;}
+const chipT=t=>`<button class="chip" data-open="t:${t.id}"><i style="background:${bcol(t.bloque)}"></i>${esc(t.nombre)}</button>`;
+const chipE=e=>`<button class="chip ex" data-open="e:${e.id}">${esc(e.nombre)}</button>`;
+function intro(){const nb=DATA.bloques.length;
+  $('#panel').innerHTML=`<div class="eyebrow">Cómo usarlo</div><h2>Toda la cursada en un mapa</h2>
+  <p>Los círculos de color son los temas de la materia, agrupados en ${nb} bloques. Los puntos chicos son las clases: cada una se une a los temas que trató. Las líneas punteadas marcan qué tema se necesita para entender otro.</p>
+  <p>Tocá un nodo o buscá arriba para ver las clases de un tema, con el link al video.</p>
+  <h3>Bloques</h3><div class="chips">${[...DATA.bloques].sort((a,b)=>a.orden-b.orden).map(b=>`<span class="chip" style="cursor:default"><i style="background:${bcol(b.id)}"></i>${esc(b.nombre)}</span>`).join('')}</div>`;}
+function open(key,focus=true){const [k,id]=key.split(':');
+  if(k==='t')showTema(id); else if(k==='e')showEj(id); else showClase(+id);
+  if(focus&&net){const nid=key; if(nodes.get(nid)){net.selectNodes([nid]); net.focus(nid,{scale:1.05,animation:{duration:400}});}}
+  if(window.innerWidth<=900) $('#panel').scrollIntoView({behavior:'smooth',block:'start'});}
+document.addEventListener('click',ev=>{const b=ev.target.closest('[data-open]'); if(!b)return; ev.preventDefault();
+  const key=b.dataset.open; if(!$('#view-mapa').hidden){open(key)} else {setView('mapa'); setTimeout(()=>open(key),60)} });
+
+/* ---------- Grafo ---------- */
+let net=null,nodes,edges;
+function buildGraph(){
+  const showC=$('#showClases').checked, showE=$('#showEj').checked;
+  const yrs=new Set([...document.querySelectorAll('.yr:checked')].map(x=>x.value));
+  const ink=css('--ink'),muted=css('--muted'),line=css('--line'),surface=css('--surface'),amber=css('--amber');
+  const N=[],L=[];
+  DATA.temas.forEach(t=>{const k=clasesDeTema(t.id).length; N.push({id:'t:'+t.id,label:t.nombre,shape:'dot',size:10+Math.min(k,14)*1.4,color:{background:bcol(t.bloque),border:bcol(t.bloque),highlight:{background:bcol(t.bloque),border:ink}},font:{color:ink,size:19,face:'IBM Plex Sans',strokeWidth:4,strokeColor:surface}})});
+  DATA.relaciones.forEach((r,i)=>L.push({id:'r'+i,from:'t:'+r.de,to:'t:'+r.a,arrows:{to:{enabled:true,scaleFactor:.5}},dashes:[4,4],color:{color:muted,opacity:.7},width:1.4}));
+  if(showC) DATA.clases.filter(c=>yrs.has(cohort(c))).forEach(c=>{N.push({id:'c:'+c.n,title:c.fecha+' · '+c.titulo,shape:'dot',size:5,color:{background:muted,border:muted,highlight:{background:ink,border:ink}},font:{color:muted,size:10,face:'IBM Plex Mono',strokeWidth:2,strokeColor:surface}});
+    c.temas.forEach(t=>L.push({from:'c:'+c.n,to:'t:'+t,color:{color:line,opacity:.9},width:.8}));});
+  if(showE) DATA.ejercicios.forEach(e=>{N.push({id:'e:'+e.id,label:e.nombre,shape:'diamond',size:7,color:{background:amber,border:amber,highlight:{background:amber,border:ink}},font:{color:amber,size:15,face:'IBM Plex Sans',strokeWidth:3,strokeColor:surface}});
+    (e.temas||[]).forEach(t=>L.push({from:'e:'+e.id,to:'t:'+t,color:{color:amber,opacity:.45},width:.8,dashes:[2,3]}));});
+  nodes=new vis.DataSet(N); edges=new vis.DataSet(L);
+  const opts={physics:{solver:'forceAtlas2Based',forceAtlas2Based:{gravitationalConstant:-55,springLength:90,springConstant:.06,avoidOverlap:.4},stabilization:{iterations:300}},
+    interaction:{hover:true,tooltipDelay:150,navigationButtons:false,keyboard:false},edges:{smooth:{type:'continuous'}},nodes:{borderWidth:1}};
+  if(net) net.destroy();
+  net=new vis.Network($('#net'),{nodes,edges},opts);
+  net.once('stabilizationIterationsDone',()=>net.setOptions({physics:{enabled:false}}));
+  net.on('click',p=>{if(p.nodes.length) open(p.nodes[0],false)});
+}
+function legend(){ $('#legend').innerHTML=[...DATA.bloques].sort((a,b)=>a.orden-b.orden).map(b=>`<span><i style="background:${bcol(b.id)}"></i>${esc(b.nombre)}</span>`).join('')+`<span><i style="background:${css('--muted')};width:6px;height:6px"></i>Clase</span><span><i style="background:${css('--amber')};border-radius:1px;transform:rotate(45deg)"></i>Tipo de ejercicio</span>`}
+['#showClases','#showEj',...[...document.querySelectorAll('.yr')].map(x=>'#'+x.id)].forEach(s=>$(s).addEventListener('change',buildGraph));
+
+/* ---------- Línea de tiempo ---------- */
+function renderTL(){let step=0;const items=DATA.linea_de_tiempo;
+  $('#tl').innerHTML=items.map((it,i)=>{const last=i===items.length-1;
+    const recs=(it.clases_recomendadas||[]).filter(r=>C[r.n]);const others=(it.otras_clases||[]).filter(n=>C[n]);
+    const row=(c,why,star)=>`<div class="recrow"><input type="checkbox" id="v${c.n}" data-seen="${c.n}" ${seen[c.n]?'checked':''} aria-label="Marcar como vista la clase ${c.n}"><span class="date">${esc(c.fecha)}</span><span>${star?'<span class="star">★ </span>':''}<a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.titulo)}</a> <small style="color:var(--muted)">· ${cohort(c)}</small> <button class="chip" style="font-size:.72rem;padding:1px 8px" data-open="c:${c.n}">ficha</button></span>${why?`<span class="why">${esc(why)}</span>`:''}</div>`;
+    if(it.hito&&!it.bloque){return `<div class="step hito"><div class="rail"><div class="dot">✓</div>${last?'':'<div class="ln"></div>'}</div><div class="card"><div class="eyebrow">Hito</div><h2>${esc(it.hito)}</h2><div class="rec">${recs.map(r=>row(C[r.n],r.motivo,true)).join('')}${others.map(n=>row(C[n],'',false)).join('')}</div></div></div>`}
+    step++;const b=B[it.bloque]||{nombre:it.bloque};
+    return `<div class="step"><div class="rail"><div class="dot" style="background:${bcol(it.bloque)}">${step}</div>${last?'':'<div class="ln"></div>'}</div><div class="card"><div class="eyebrow">Etapa ${step}${it.hito?' · '+esc(it.hito):''}</div><h2>${esc(b.nombre)}</h2>${b.descripcion?`<p>${esc(b.descripcion)}</p>`:''}<div class="chips">${(it.temas||[]).map(x=>T[x]).filter(Boolean).map(chipT).join('')}</div>
+    <div class="rec">${recs.map(r=>row(C[r.n],r.motivo,true)).join('')}</div>
+    ${others.length?`<details class="more"><summary>${others.length} clase${others.length>1?'s':''} más sobre esta etapa</summary><div class="rec">${others.map(n=>row(C[n],'',false)).join('')}</div></details>`:''}</div></div>`}).join('');
+  updateProgress();}
+function updateProgress(){const tot=DATA.clases.length,v=Object.values(seen).filter(Boolean).length;$('#pbar').style.width=(100*v/tot)+'%';$('#ptext').textContent=`${v} de ${tot} clases vistas`}
+document.addEventListener('change',ev=>{const n=ev.target.dataset&&ev.target.dataset.seen; if(!n)return; seen[n]=ev.target.checked; saveSeen();
+  document.querySelectorAll(`[data-seen="${n}"]`).forEach(x=>x.checked=ev.target.checked); updateProgress();});
+
+/* ---------- Tabla ---------- */
+function renderTable(){const fy=$('#fyear').value,ft=$('#ftipo').value;
+  $('#tbody').innerHTML=DATA.clases.filter(c=>(!fy||cohort(c)===fy)&&(!ft||c.tipo===ft)).map(c=>`<tr><td class="num">${c.n}</td><td class="num">${esc(c.fecha)}<br><small style="color:var(--muted)">${cohort(c)}</small></td><td><button data-open="c:${c.n}">${esc(c.titulo)}</button><br><small style="color:var(--muted)">${esc(c.resumen||'')}</small></td><td><div class="chips">${c.temas.map(x=>T[x]).filter(Boolean).map(chipT).join('')}</div></td><td><div class="chips">${c.ejercicios.map(x=>E[x]).filter(Boolean).map(chipE).join('')}</div></td><td><a href="${esc(c.link)}" target="_blank" rel="noopener">Ver</a></td></tr>`).join('');}
+$('#fyear').addEventListener('change',renderTable);$('#ftipo').addEventListener('change',renderTable);
+
+/* ---------- Búsqueda ---------- */
+const norm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+const stem=w=>w.length>4?w.replace(/(ciones|cion|es|s)$/,''):w;
+const toks=s=>norm(s).split(/[^a-z0-9µμ]+/).filter(w=>w.length>1);
+/* siglas y términos relacionados: ampliar la consulta con lo que un alumno querría ver */
+const SYN={pcm:'modulacion codificacion pulsos cuantificacion muestreo',am:'amplitud modulada modulacion portadora',fm:'frecuencia modulada angular bessel carson',pm:'fase modulacion angular',dsb:'doble banda lateral',ssb:'banda lateral unica',tdm:'division tiempo multiplexacion',fdm:'division frecuencia multiplexacion',snr:'relacion senal ruido',db:'decibeles unidades logaritmicas',dbm:'decibeles potencia',nyquist:'muestreo aliasing',shannon:'capacidad canal',friis:'figura ruido cascada',bessel:'fm espectro',carson:'ancho banda fm',fourier:'transformada serie espectro',antena:'antenas directividad dipolo',ruido:'termico blanco figura temperatura',filtro:'pasabajos pasabanda selectividad',aliasing:'muestreo nyquist antialias',superheterodino:'receptor frecuencia imagen oscilador',agc:'control automatico ganancia',entropia:'informacion bits',bit:'informacion baudios',baudio:'senalizacion simbolo',cuantificacion:'niveles error ruido',cuantizacion:'cuantificacion niveles error',cuantizar:'cuantificacion niveles',digitalizacion:'muestreo cuantificacion pcm',analogico:'continuo señales',parseval:'rayleigh energia',convolucion:'producto espectro',tp:'ejercicios guia',parcial:'ejercicios referencias'};
+const lev=(a,b,max)=>{if(Math.abs(a.length-b.length)>max)return max+1;let p=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){const c=[i];let m=i;for(let j=1;j<=b.length;j++){c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));if(c[j]<m)m=c[j]}if(m>max)return max+1;p=c}return p[b.length]};
+const mkF=(text,w)=>{const t=norm(text);return{t,w,words:[...new Set(toks(text).map(stem))]}};
+const clsText=c=>[c.titulo,c.resumen,(c.detalle||[]).join(' ')].join(' ');
+const index=[...DATA.temas.map(t=>({key:'t:'+t.id,kind:'Tema',label:t.nombre,prio:0,f:[mkF(t.nombre,6),mkF((B[t.bloque]||{}).nombre,2),mkF((B[t.bloque]||{}).descripcion,.5)]})),
+  ...DATA.ejercicios.map(e=>({key:'e:'+e.id,kind:'Ejercicio',label:e.nombre,prio:1,f:[mkF(e.nombre,6),mkF((e.temas||[]).map(x=>(T[x]||{}).nombre).join(' '),2)]})),
+  ...DATA.clases.map(c=>({key:'c:'+c.n,kind:c.fecha,label:c.titulo,prio:2,c,f:[mkF(c.titulo+' '+c.fecha,4),mkF(c.temas.map(x=>(T[x]||{}).nombre).join(' ')+' '+c.ejercicios.map(x=>(E[x]||{}).nombre).join(' '),3),mkF(c.resumen,2),mkF((c.detalle||[]).join(' '),1),mkF((c.referencias||[]).join(' '),1)]}))];
+/* puntaje de un término contra un documento: coincidencia exacta/prefijo/subcadena, o aproximada (tolera errores de tipeo y de transcripción) */
+function tokScore(q,d,k){let best=0;const s=stem(q),max=s.length>=8?2:s.length>=5?1:0;
+  for(const f of d.f){let m=0;
+    if(f.t.includes(q))m=1; else if(s.length>2&&f.words.some(w=>w.startsWith(s)||(s.length>3&&w.includes(s))))m=.85;
+    else if(max)for(const w of f.words){if(lev(s,w,max)<=max){m=.55;break}}
+    best=Math.max(best,m*f.w*k)}
+  return best}
+function runSearch(raw,limit){const q=toks(raw); if(!q.length)return[];
+  const terms=q.map(w=>({w,alts:toks(SYN[w]||'').slice(0,6)}));
+  return index.map(d=>{let sc=0,hit=0;
+    for(const t of terms){let s=tokScore(t.w,d,1);
+      if(!s&&t.alts.length)s=Math.max(...t.alts.map(a=>tokScore(a,d,.35)));
+      else if(t.alts.length)s+=Math.max(...t.alts.map(a=>tokScore(a,d,.15)));
+      if(s){hit++;sc+=s}}
+    if(!hit)return null;
+    if(terms.length>1)sc*=.4+.6*hit/terms.length;
+    return{d,sc:sc-d.prio*.01}}).filter(Boolean).sort((a,b)=>b.sc-a.sc).slice(0,limit)}
+function snippet(d,raw){if(!d.c)return'';const q=toks(raw).map(stem);
+  const lines=[...(d.c.detalle||[]),d.c.resumen||''];
+  const l=lines.find(x=>{const n=norm(x);return q.some(w=>n.includes(w))});
+  return l?(l.length>150?l.slice(0,150)+'…':l):''}
+let aiOut='';
+function search(){const raw=$('#q').value.trim(); const box=$('#results'); aiOut=''; if(raw.length<2){box.hidden=true;return}
+  const hits=runSearch(raw,30);
+  const ai=window.__sample?`<button class="ai" data-ai="1"><span class="kind">Claude</span><span>Preguntarle a Claude: «${esc(raw)}»<small style="display:block;color:var(--muted)">Responde usando el contenido de las clases</small></span></button>`:'';
+  box.innerHTML=ai+(hits.length?hits.map(({d})=>{const s=snippet(d,raw);return`<button data-open="${d.key}"><span class="kind">${esc(d.kind)}</span><span>${esc(d.label)}${s?`<small style="display:block;color:var(--muted)">${esc(s)}</small>`:''}</span></button>`}).join(''):'<div style="padding:10px 12px" class="empty">Sin coincidencias directas.'+(ai?' Probá preguntarle a Claude.':' Probá con otra palabra.')+'</div>');
+  box.hidden=false;}
+async function askAI(){const raw=$('#q').value.trim(),box=$('#results'); if(!raw||!window.__sample)return;
+  let top=runSearch(raw,10).filter(x=>x.d.c).map(x=>x.d.c); if(top.length<4)top=DATA.clases.slice();
+  const ctx=top.map(c=>`[clase ${c.n}] ${c.fecha} · ${c.titulo}\n${c.resumen}\n- ${(c.detalle||[]).join('\n- ')}`).join('\n\n');
+  const ac=new AbortController(); box.innerHTML='<div style="padding:10px 12px" class="empty">Claude está leyendo las clases…</div>';
+  const show=(t,fin)=>{box.innerHTML=`<div style="padding:12px 14px;line-height:1.55;white-space:pre-wrap">${esc(t).replace(/\[clase (\d+)\]/gi,(m,n)=>`<button data-open="c:${n}" style="display:inline;width:auto;padding:0 6px;border:1px solid var(--line);border-radius:4px;font-size:.8rem;color:var(--accent)">clase ${n}</button>`)}${fin?'<div class="empty" style="font-size:.78rem;margin-top:8px">Respuesta generada con IA a partir de fichas automáticas; verificá en el video.</div>':''}</div>`};
+  try{const r=await window.__sample(`Sos ayudante de la materia Comunicaciones (Ing. de Sonido, UNTREF). Respondé en español rioplatense, claro y breve, la pregunta del alumno usando SOLO el material de las clases de abajo. Citá la fuente como [clase N]. Si el material no alcanza, decilo.\n\nPREGUNTA: ${raw}\n\nMATERIAL:\n${ctx}`,{onText:({text})=>show(text,false),signal:ac.signal,modelTier:'quick',cache:false});show(r.text,true)}
+  catch(e){box.innerHTML=`<div style="padding:10px 12px" class="empty">${e&&e.code==='not_granted'?'Se necesita tu permiso para consultar a Claude.':'No se pudo consultar a Claude ahora.'}</div>`}}
+(window.claude&&claude.use?claude.use('sample'):Promise.resolve(null)).then(s=>{if(s){window.__sample=s; if($('#q').value.trim().length>=2)search()}}).catch(()=>{});
+$('#q').addEventListener('input',search);
+$('#q').addEventListener('keydown',e=>{if(e.key==='Escape'){$('#results').hidden=true}});
+document.addEventListener('click',e=>{if(e.target.closest('[data-ai]')){askAI();return} if(!e.target.closest('.search'))$('#results').hidden=true; else if(e.target.closest('[data-open]'))$('#results').hidden=true;});
+
+/* ---------- Vistas y tema ---------- */
+function setView(v){document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.view===v));
+  ['mapa','tl','clases'].forEach(x=>$('#view-'+x).hidden=x!==v); try{localStorage.setItem('vista',v)}catch(e){}
+  if(v==='mapa'&&net) net.redraw();}
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+function retheme(){legend(); buildGraph(); renderTL(); renderTable();}
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',retheme);
+new MutationObserver(retheme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+
+intro(); legend(); buildGraph(); renderTL(); renderTable();
+let v0='mapa'; try{v0=localStorage.getItem('vista')||'mapa'}catch(e){}
+const h=location.hash.slice(1); if(['mapa','tl','clases'].includes(h)) v0=h; setView(v0);
+</script>

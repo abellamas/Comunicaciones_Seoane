@@ -1,0 +1,11 @@
+{"n": 36, "tipo": "teoria",
+ "resumen": "Cuantificación uniforme: error de cuantificación como variable aleatoria uniforme, potencia del ruido de cuantificación y relación S/Nq en función de la cantidad de dígitos binarios.",
+ "temas": ["Cuantificación", "Ruido de cuantificación", "PCM"],
+ "detalle": [
+  "Se cuantifican las muestras (redondeo) a niveles separados ΔQ; N = rango dinámico / ΔQ",
+  "Error de cuantificación acotado en ±ΔQ/2, uniforme, de media nula; potencia Nq = ΔQ²/12",
+  "S/Nq = 3N²; con N = 2^n → 4,77 + 6·n dB (6 dB por dígito binario)",
+  "CD: 16 bits ≈ 96 dB (65.536 niveles); 20 bits ≈ 120 dB",
+  "Repaso de sistemas numéricos posicionales (binario/decimal); un dígito decimal equivale a log2 10 ≈ 3,32 bits",
+  "La cuantificación hace irreversible la digitalización; la cantidad de bits se elige para que el error sea imperceptible"
+ ]}

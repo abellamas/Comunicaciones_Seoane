@@ -1,0 +1,11 @@
+{"n": 38, "tipo": "teoria",
+ "resumen": "Introducción a la modulación angular: definición de PM y FM según qué varía linealmente con el mensaje, relación entre fase y frecuencia instantánea, índice de modulación para un tono y potencia constante.",
+ "temas": ["Modulación angular (FM/PM)", "Índice de modulación", "Modulación lineal (AM)"],
+ "detalle": [
+  "En AM varía la envolvente; en modulación angular la amplitud es constante y el mensaje está en el ángulo θ(t)",
+  "Frecuencia instantánea ωi = ωc + dθ/dt; desviación Δω = dθ/dt",
+  "PM: θ(t) = kp·x(t) (fase lineal con el mensaje); FM: Δf = kf·x(t), θ(t) = kω∫x(t)dt",
+  "En PM la desviación de frecuencia sigue a la derivada del mensaje: ambas modulan fase y frecuencia a la vez",
+  "Con un tono: φ(t) = Ac·cos(ωct + β·sen ωmt), β = kω·Am/ωm; con tonos FM y PM no se distinguen a simple vista",
+  "La potencia de la onda modulada angularmente es constante (fasor de amplitud fija que oscila en ángulo)"
+ ]}

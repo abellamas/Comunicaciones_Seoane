@@ -1,0 +1,10 @@
+{"n": 11, "tipo": "teoria",
+ "resumen": "Espectro del tren de pulsos rectangulares y energía en el lóbulo principal, y propiedades de la transformada de Fourier útiles para la materia: linealidad, modulación, desplazamiento temporal y convolución.",
+ "temas": ["Serie de Fourier", "Transformada de Fourier", "Señales y espectro", "Ancho de banda", "Teorema de Parseval / Rayleigh", "Convolución"],
+ "detalle": [
+  "Espectro de amplitud par y de fase impar; pulsos más angostos requieren más ancho de banda; la separación de armónicas depende del período",
+  "El lóbulo principal del pulso rectangular contiene ~90 % de la energía (Rayleigh, integración numérica de sinc²)",
+  "Propiedad de modulación: multiplicar por una portadora cos(ω0t) traslada el espectro a ±ω0 y duplica el ancho de banda",
+  "Desplazamiento temporal sólo agrega fase lineal: no cambia ni potencia ni ancho de banda",
+  "Convolución en el tiempo = producto de espectros; dos pulsos rectangulares dan un trapecio (o triángulo si son iguales, espectro sinc²)"
+ ]}

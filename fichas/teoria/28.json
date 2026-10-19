@@ -1,0 +1,11 @@
+{"n": 28, "tipo": "teoria",
+ "resumen": "Muestreo real (natural y flat-top/sample & hold) con su efecto de apertura, origen de los 44,1 kHz del CD, y cuantificación uniforme: error, potencia del ruido de cuantificación y SNR en función de los bits.",
+ "temas": ["Teorema de muestreo (Nyquist)", "Muestreo natural y flat-top", "Cuantificación", "Ruido de cuantificación", "PCM"],
+ "detalle": [
+  "Muestreo natural: los alias quedan ponderados por una sinc (atenuados); flat-top con circuito sample & hold (capacitor, llaves MOSFET, seguidor)",
+  "Efecto de apertura: inclinación sinc del espectro recuperado, corregible por ecualización",
+  "44,1 kHz surge de grabar audio digital sobre video (3 muestras/línea × 294 líneas × 50 campos/s)",
+  "Cuantificación uniforme (escalones ΔQ iguales); la no uniforme se logra con un compresor + cuantificador uniforme",
+  "Error de cuantificación: aleatorio, uniforme en ±ΔQ/2, media nula, potencia Nq = ΔQ²/12",
+  "S/Nq = 3M² → 4,77 + 6,02·n dB (≈ 6 dB por bit); 16 bits (CD) ≈ 96 dB; cuantificar es redondear"
+ ]}

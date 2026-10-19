@@ -1,0 +1,10 @@
+{"n": 35, "tipo": "teoria",
+ "resumen": "Parte 2 de la clase del 30-09-2024 (misma clase que la n.º 32): resultado de la cuantificación no uniforme, codificación de las muestras y representación eléctrica, tasa y ancho de banda de PCM.",
+ "temas": ["Cuantificación no uniforme (companding)", "PCM", "Tasa de información", "Ancho de banda", "Codificación de línea"],
+ "detalle": [
+  "Ley A con palabra de 8 bits (polaridad, segmento, nivel): ~60 dB en niveles bajos y 24 dB en altos",
+  "Codificación de niveles (natural o signo-magnitud); MSB y LSB",
+  "Lógica positiva/negativa, pulsos unipolares o bipolares",
+  "R = fs · n; conversión paralelo–serie con duración de bit Ts/n",
+  "Ancho de banda de PCM entre R/2 (ideal) y R"
+ ]}

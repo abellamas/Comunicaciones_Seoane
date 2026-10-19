@@ -1,0 +1,11 @@
+{"n": 45, "tipo": "teoria",
+ "resumen": "Por qué modular (tamaño de antena y reparto del espectro radioeléctrico con distintas portadoras) y análisis de la demodulación sincrónica de doble banda lateral sin portadora con errores de frecuencia y fase del oscilador local.",
+ "temas": ["Modulación lineal (AM)", "DSB", "Demodulación / detección", "Antenas (directividad y área efectiva)", "Multiplexación (FDM)"],
+ "detalle": [
+  "La antena debe medir ~λ/2 (o λ/4 con plano de tierra): en banda base sería inviable; con portadoras de MHz es realizable",
+  "Asignando portadoras distintas varias emisoras comparten el espectro radioeléctrico sin interferirse",
+  "Receptor DBL-SP: producto con oscilador local y filtro pasabajos; salida ½·x(t)·cos(Δω·t + θ)",
+  "Error de fase: atenúa la salida (cos θ; se anula con π/2)",
+  "Error de frecuencia: corre las componentes y destruye la relación armónica (efecto “Pato Donald”); se corrige con el clarificador",
+  "Sin portadora transmitida hace falta un operador; enviando la portadora (AM) el receptor puede ser automático y masivo"
+ ]}

@@ -1,0 +1,9 @@
+{"n": 34, "tipo": "teoria",
+ "resumen": "Parte 1 de la clase del 30-09-2024 (misma clase que la n.º 33): repaso de la SNR de cuantificación y desarrollo de la cuantificación no uniforme con leyes A y μ por segmentos.",
+ "temas": ["Cuantificación", "Ruido de cuantificación", "Cuantificación no uniforme (companding)"],
+ "detalle": [
+  "S/Nq = 4,77 + 6·n dB; cada muestra cuantificada es un número binario de n dígitos",
+  "La señal digitalizada es una tabla de números; la cuantificación es un redondeo irreversible",
+  "Con cuantificación uniforme la SNR instantánea depende del nivel de la señal",
+  "Compresión logarítmica (leyes μ y A) aproximada por 13 segmentos con pendientes que se duplican"
+ ]}

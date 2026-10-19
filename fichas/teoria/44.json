@@ -1,0 +1,11 @@
+{"n": 44, "tipo": "mixta",
+ "resumen": "Se cierra la multiplexación por división de tiempo con un ejercicio (tramas, sincronismo, señal PAM) y comienza la modulación lineal: doble banda lateral sin portadora, moduladores no lineales o variantes en el tiempo y demodulación sincrónica.",
+ "temas": ["Multiplexación (TDM)", "PAM", "Modulación lineal (AM)", "DSB", "Demodulación / detección"],
+ "detalle": [
+  "TDM: la llave gira a N × la frecuencia de muestreo del canal más rápido; trama = al menos una muestra de cada canal",
+  "Agrupando canales lentos en llaves secundarias se reduce el ancho de banda (144 → 72 kHz); las llaves deben estar sincronizadas (marcas de trama)",
+  "La salida de la llave es una señal PAM; multiplexar muestras analógicas ocupa menos ancho de banda que multiplexar PCM",
+  "Modulación lineal: produce un número finito de bandas laterales; x(t)·cos ωct traslada el espectro a ±fc (BLS y BLI) sin portadora (DBL-SP / DSB-SC)",
+  "El modulador debe ser no lineal o lineal variante en el tiempo (conmutación, transistor, anillo de diodos)",
+  "Demodulación sincrónica: multiplicar por una portadora local de igual frecuencia y fase y filtrar pasabajos (se obtiene x(t)/2)"
+ ]}

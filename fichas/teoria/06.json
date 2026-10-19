@@ -1,0 +1,10 @@
+{"n": 6, "tipo": "teoria",
+ "resumen": "Parte 1 de la clase del 29-08-2024 (misma clase que la n.º 5): tipos y fuentes de ruido, compatibilidad electromagnética y origen físico del ruido térmico (Boltzmann, Planck).",
+ "temas": ["Ruido (tipos y fuentes)", "Compatibilidad electromagnética", "Ruido térmico", "Relación señal a ruido (SNR)"],
+ "detalle": [
+  "Ruido: proceso aleatorio indeseado; interferencias, zumbido y distorsión no son estrictamente ruido",
+  "Fuentes artificiales, naturales y de circuito (shot, 1/f, partición, térmico)",
+  "Compatibilidad vs. susceptibilidad electromagnética; la UIT asigna bandas (AM 530–1700 kHz, FM 88–108 MHz)",
+  "Ruido térmico por colisiones de electrones: media cero, varianza no nula, energía térmica kT",
+  "Radiación de cuerpo negro y cuantización de Planck (E = hf) dan la densidad espectral del ruido térmico"
+ ]}

@@ -1,0 +1,11 @@
+{"n": 39, "tipo": "teoria",
+ "resumen": "Códigos de línea para transmitir o grabar pulsos binarios: clasificación (unipolar/bipolar, RZ/NRZ, por nivel o por símbolo), sincronismo y requerimientos que llevan a elegir códigos bifásicos tipo Manchester.",
+ "temas": ["Codificación de línea", "PCM", "Sincronismo"],
+ "detalle": [
+  "Ancho de un pulso real medido al 50 % de amplitud; ancho de banda de la señal binaria ≈ R/2",
+  "Clasificación: unipolar/bipolar, lógica positiva/negativa, RZ/NRZ, codificación por nivel (L) o por símbolo (marca M / espacio S)",
+  "El receptor necesita sincronismo (analogías del disparo del osciloscopio y la lámpara estroboscópica); conviene extraerlo de la propia señal",
+  "Requisitos: valor medio nulo (bipolar), fuente de sincronismo (transiciones permanentes, RZ) e insensibilidad a la polaridad (por símbolo)",
+  "Sin componente de continua se pueden usar transformadores (aislación galvánica) y evitar capacitores de bloqueo",
+  "Bifásico/Manchester por símbolo cumple los tres requisitos; se usa en AES/EBU y en grabación magnética y CD"
+ ]}

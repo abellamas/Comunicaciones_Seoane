@@ -1,0 +1,9 @@
+{"n": 10, "tipo": "teoria",
+ "resumen": "Parte 2 de la clase del 02-09-2024 (misma clase que la n.º 8): figura de ruido en cuadripolos pasivos y activos y fórmula de Friis para amplificadores en cascada.",
+ "temas": ["Figura de ruido", "Relación señal a ruido (SNR)", "Ruido térmico"],
+ "detalle": [
+  "En un pasivo la señal se atenúa pero el ruido kTB no: la SNR empeora",
+  "Figura de ruido F = SNR entrada / SNR salida, siempre > 1 (ideal 0 dB)",
+  "Activo: F = 1 + Na/(G·Ni); sólo los elementos disipativos generan ruido",
+  "Cascada (Friis): F = F1 + (F2−1)/G1 + …; la primera etapa fija la figura de ruido total"
+ ]}

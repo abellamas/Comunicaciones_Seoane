@@ -1,0 +1,10 @@
+{"n": 23, "tipo": "teoria",
+ "resumen": "Parte 1 de la clase del 19-09-2024 (misma clase que la n.º 22): introducción a PCM, muestreo, aliasing y reconstrucción, y elección de la frecuencia de muestreo según el filtro antialias.",
+ "temas": ["PCM", "Teorema de muestreo (Nyquist)", "Aliasing", "Filtros"],
+ "detalle": [
+  "PCM = muestreo + cuantificación + codificación",
+  "La señal debe estar limitada en banda por un filtro pasabajos (antialias)",
+  "El muestreo replica el espectro en múltiplos de fs; con fs < 2fmáx los alias se solapan (aliasing)",
+  "Recuperación con filtro pasabajos; filtro real con pendiente y factor de forma",
+  "La frecuencia de muestreo la define el filtro, no la señal"
+ ]}

@@ -1,0 +1,10 @@
+{"n": 41, "tipo": "teoria",
+ "resumen": "Parte 2 de la clase del 03-10-2024 (misma clase que la n.º 39): códigos bifásicos (Manchester), justificación del valor medio nulo y un primer ejercicio de cuantificación.",
+ "temas": ["Codificación de línea", "Cuantificación"],
+ "detalle": [
+  "Los códigos por símbolo son insensibles a la polaridad",
+  "Bifásicos: bipolares y con transición a mitad de bit; Manchester por símbolo cumple todos los requisitos (dos frecuencias para 1 y 0)",
+  "Útil en grabación magnética y CD, donde la polaridad puede invertirse",
+  "Valor medio nulo: permite entradas con transformador (aislación galvánica) y evita capacitores electrolíticos de bloqueo",
+  "El número de dígitos binarios debe ser entero (error máximo = ΔQ/2)"
+ ]}

@@ -1,0 +1,9 @@
+{"n": 21, "tipo": "teoria",
+ "resumen": "Desarrollo matemático del muestreo ideal con un tren de impulsos, espectro de la señal muestreada y reconstrucción mediante filtro pasabajos ideal.",
+ "temas": ["Teorema de muestreo (Nyquist)", "Aliasing", "Transformada de Fourier", "Filtros"],
+ "detalle": [
+  "Muestreo ideal: xs(t) = x(t)·Σδ(t − nTs); cada impulso toma el valor de la señal en nTs",
+  "En frecuencia: convolución con un peine de impulsos → réplicas del espectro (alias) cada ωs",
+  "Reconstrucción: filtro pasabajos ideal con corte en ωs/2 que conserva sólo el alias principal (banda base)",
+  "La transformada directa de la señal muestreada da Σ x(nTs)·e^(−jωnTs) (propiedad de desplazamiento temporal)"
+ ]}

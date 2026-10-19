@@ -1,0 +1,11 @@
+{"n": 22, "tipo": "teoria",
+ "resumen": "Inicio de la digitalización de señales (PCM): muestreo con tren de impulsos, condición de Nyquist, aliasing y reconstrucción, con énfasis en que la frecuencia de muestreo la define el filtro antialias.",
+ "temas": ["PCM", "Teorema de muestreo (Nyquist)", "Aliasing", "Filtros", "Transformada de Fourier"],
+ "detalle": [
+  "PCM = muestreo + cuantificación + codificación",
+  "Requisito: señal limitada en banda, lo que sólo garantiza un filtro pasabajos previo (filtro antialias)",
+  "Multiplicar por un peine de impulsos modula sus amplitudes; en frecuencia el espectro se replica cada fs (alias)",
+  "fs ≥ 2fmáx evita el solapamiento; si no, aparece aliasing y la señal no se recupera",
+  "Reconstrucción con pasabajos (ideal = brick-wall); los filtros reales tienen pendiente y se caracterizan por el factor de forma",
+  "La frecuencia de muestreo se elige según la respuesta del filtro, no según el contenido supuesto de la señal"
+ ]}

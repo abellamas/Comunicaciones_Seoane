@@ -1,0 +1,10 @@
+{"n": 17, "tipo": "mixta",
+ "resumen": "Ejercicios de teoría de la información (tasa de información de imágenes y video, capacidad de canal) y desarrollo teórico de la velocidad de señalización en baudios frente a la tasa de bits.",
+ "temas": ["Información y entropía", "Tasa de información", "Capacidad de canal (Shannon)", "Velocidad de señalización (baudios)", "Señales M-arias"],
+ "detalle": [
+  "Teorema fundamental: si R ≤ C existe una codificación que permite transmitir sin errores",
+  "Baudio: un evento de señalización (símbolo) por segundo; se calcula con el pulso más corto, s = 1/τmín",
+  "Los pulsos de arranque y parada (sincronismo) cuentan para la señalización pero no llevan información de la fuente: R < s",
+  "Un símbolo M-ario lleva log2 M bits: R = s·log2 M; 1 baudio = 1 bit/s sólo en el caso binario",
+  "Los símbolos pueden ser amplitudes o fases (4 fases → 2 bits por símbolo); repaso de sistemas de numeración posicionales"
+ ]}
